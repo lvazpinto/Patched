@@ -1,10 +1,12 @@
 class PatchesController < ApplicationController
   def new
     @patch = Patch.new
+    @vegetables = Vegetable.all
   end
 
   def create
     @patch = Patch.new(patch_params)
+    @vegetables = Vegetable.new(vegetable_params)
   end
 
   def show
@@ -18,5 +20,9 @@ class PatchesController < ApplicationController
 
   def patch_params
     params.require(:patch).permit(:vegetables)
+  end
+
+  def vegetable_params
+    params.require(:vegetables).permit(:name)
   end
 end
