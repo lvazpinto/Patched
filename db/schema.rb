@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_08_164547) do
+ActiveRecord::Schema.define(version: 2021_06_09_110009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,11 +37,17 @@ ActiveRecord::Schema.define(version: 2021_06_08_164547) do
   end
 
   create_table "instructions", force: :cascade do |t|
-    t.text "planting"
-    t.text "harvesting"
     t.bigint "vegetable_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "harvesting_instructions_step_one"
+    t.text "harvesting_instructions_step_two"
+    t.text "harvesting_instructions_step_three"
+    t.text "harvesting_instructions_step_four"
+    t.text "planting_instructions_step_one"
+    t.text "planting_instructions_step_two"
+    t.text "planting_instructions_step_three"
+    t.text "planting_instructions_step_four"
     t.index ["vegetable_id"], name: "index_instructions_on_vegetable_id"
   end
 
