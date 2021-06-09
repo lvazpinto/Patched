@@ -2,24 +2,33 @@
   background-color: $oatmeal-med;
 }
 
-h1 {
+.pages-container h1 {
   font-size: 24px;
   color: $terracotta;
-  text-align: center;
+  font-weight: bold;
 }
 
-p {
+.pages-container p {
   font-size: 14px;
   color: $gray-dark;
-  text-align: center;
+  text-align: justify;
+  margin-top: 20px;
+  margin-bottom: 26px;
 }
 
-h5 {
+.pages-container h5 {
   font-size: 16px;
   color: $dark-olive;
   text-align: left;
+  font-family: DM Mono;
+  font-weight: light;
 }
 
 #buttonforward {
   margin-right: 5px;
 }
+
+.pages-container {
+  padding: 32px;
+}
+
