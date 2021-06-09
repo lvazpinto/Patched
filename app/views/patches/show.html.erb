@@ -1,6 +1,17 @@
-<%= link_to root_path do %>
-  <%= image_tag "button/backarrow.png", class:"buttonarrow" %>
-<% end %>
-<h1>Your vegetables</h1>
-<p>These are your selected vegetables. You can edit these any time in your profile.</p>
-<%= link_to 'Generate my patch', patch_path %>
+<div class="background">
+  <%= link_to root_path do %>
+    <%= image_tag "button/backarrow.png", class:"buttonarrow-left" %>
+  <% end %>
+  <div class="pages-container">
+    <h1>Your vegetables</h1>
+    <p>These are your selected vegetables. You can edit these any time in your profile.</p>
+  </div>
+  <div class="vegetable-card">
+    <h5>Carrot</h5>
+  </div>
+  <div class="generate">
+    <%= link_to patch_path do %>
+    <h4>Generate my patch</h4>
+    <% end %>
+  </div>
+</div>

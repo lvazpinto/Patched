@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div>
+  <%= image_tag "guy-in-garden@2x.png", class:"img-signup"%>
+</div>
+<div class="background">
+  <h3>Create an eco-friendly vegetable patch with our simple step-by-step guide</h3>
+  <div class="generate">
+    <%= link_to new_user_registration_path do %>
+    <h4>Sign up</h4>
+    <% end %>
+  </div>
+  <div class="loginlink">
+    <%= link_to new_user_session_path do %>
+    <h4>Log in</h4>
+    <% end %>
+  </div>
+</div>
