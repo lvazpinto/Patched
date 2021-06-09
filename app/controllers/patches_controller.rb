@@ -18,7 +18,6 @@ class PatchesController < ApplicationController
   # def edit
     # @patch = Patch.find(params[:id])
   # end
-
   private
 
   def patch_params
