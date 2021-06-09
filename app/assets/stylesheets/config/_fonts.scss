@@ -1,11 +1,11 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap');
 // Define fonts for body and headers
 $body-font: "DM Sans", "Helvetica", "sans-serif";
 $headers-font: "Merriweather", "Helvetica", "sans-serif";
-
+$tab-font: "DM Mono", "Helvetica", "sans-serif";
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
