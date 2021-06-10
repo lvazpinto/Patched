@@ -8,6 +8,9 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+// Your JavaScript partials
+@import "jquery-bar-rating/dist/themes/css-stars";
+
 // Your CSS partials
 @import "pages/index";
 @import "patches/index";
@@ -16,4 +19,9 @@
 @import "components/background_light";
 @import "components/index";
 @import "components/nav_bar";
+@import "components/vegetable-card-slider";
 @import "patches/edit"
+
+.body-wrapper {
+  margin-bottom: 80px;
+}

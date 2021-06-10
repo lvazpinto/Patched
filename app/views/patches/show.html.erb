@@ -2,17 +2,25 @@
   <%= link_to root_path do %>
     <%= image_tag "button/backarrow.png", class:"buttonarrow-left" %>
   <% end %>
-<div class="pages-container">
-    <h1>Planting</h1>
+  <div class="pages-container">
+      <h1>Planting</h1>
+  </div>
+      <ul class="list-inline tabs-underlined">
+        <li>
+          <a href="#" class="tab-underlined active">Vegetables</a>
+        </li>
+      </ul>
 </div>
-    <ul class="list-inline tabs-underlined">
-      <li>
-        <a href="#" class="tab-underlined active">Vegetables</a>
-      </li>
-    </ul>
 <div class="background-light">
-  <div class="vegetable-card">
+  <h3>Spring</h3>
+  <div class="vegetable-card-slider">
+    <div class="vegetable-card-content">
       <h5>Carrots</h5>
+      <p>10 days to go until planting</p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="160"></div>
+      </div>
+    </div>
   </div>
 </div>
 
