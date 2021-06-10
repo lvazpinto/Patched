@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2021_06_10_154115) do
     t.bigint "patch_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "status"
+    t.string "status", default: "planted"
     t.index ["patch_id"], name: "index_patch_vegetables_on_patch_id"
     t.index ["vegetable_id"], name: "index_patch_vegetables_on_vegetable_id"
   end

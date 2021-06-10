@@ -26,6 +26,9 @@ class PatchesController < ApplicationController
   def index
     @patches = Patch.all
   end
+  
+  def setup
+  end
 
   private
 
@@ -34,6 +37,6 @@ class PatchesController < ApplicationController
   end
 
   def find_patch
-    @patch = Patch.find(params[:id])
+
   end
 end
