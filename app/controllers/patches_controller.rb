@@ -26,7 +26,7 @@ class PatchesController < ApplicationController
   def index
     @patches = Patch.all
   end
-  
+
   def setup
   end
 
@@ -37,6 +37,5 @@ class PatchesController < ApplicationController
   end
 
   def find_patch
-
   end
 end

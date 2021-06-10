@@ -8,6 +8,9 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+// Your JavaScript partials
+@import "jquery-bar-rating/dist/themes/css-stars";
+
 // Your CSS partials
 @import "pages/index";
 @import "patches/index";
