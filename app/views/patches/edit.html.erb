@@ -6,7 +6,7 @@
     <h1>Your vegetable selection</h1>
     <p>These vegetables perfectly match your garden.</p>
     <p>Select the vegetables you would like to grow in your patch.</p>
-      <%= simple_form_for @patchvegetable do |f| %>
+      <%= simple_form_for @patchvegetable, :url => patch_patchvegetables_create_path(@patch), :method => :post do |f| %>
         <%= f.input :vegetable, as: :check_boxes, collection: @vegetables %>
         <%= f.submit %>
       <% end %>
