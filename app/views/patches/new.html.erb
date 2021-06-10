@@ -9,6 +9,8 @@
       <%= @vegetables.each do |v| %>
         <div class="vegetable-card">
           <%= v.name %>
+          <%= cl_image_tag(v.photo.key,
+      width: 100, height: 50, crop: :fill) %>
         </div>
       <% end %>
   </div>
