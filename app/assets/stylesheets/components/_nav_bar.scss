@@ -30,6 +30,10 @@
   }
 
   &_item-active svg {
+
+    path{
+      fill: $terracotta
+    }
     //dev
     fill: $terracotta;
     display: flex;
