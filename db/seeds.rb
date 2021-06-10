@@ -7,14 +7,6 @@ Patch.destroy_all
 
 puts 'Started to create the vegetables'
 
-# patch1 = Patch.create (
-#   patch_area: 20,
-#   hours_of_sun: 5,
-#   location: "lisboa",
-#   status: true,
-#   user_id: 1
-#   )
-
 #creating veggie
 tomatoes = Vegetable.create(
   name: "Tomatoes",
