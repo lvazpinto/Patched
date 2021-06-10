@@ -17,10 +17,13 @@ class PatchesController < ApplicationController
 
   def show
   end
-
-  def edit
-    @patch = Patch.find(params[:id])
+  
+  def setup
   end
+
+  # def edit
+    # @patch = Patch.find(params[:id])
+  # end
 
   private
 
@@ -29,6 +32,6 @@ class PatchesController < ApplicationController
   end
 
   def find_patch
-    @patch = Patch.find(params[:id])
+
   end
 end
