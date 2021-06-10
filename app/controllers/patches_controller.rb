@@ -1,4 +1,5 @@
 class PatchesController < ApplicationController
+  before_action :find_patch, only: [:show, :edit]
   def new
     @patch = Patch.new
     @vegetables = Vegetable.all
@@ -10,20 +11,23 @@ class PatchesController < ApplicationController
     @vegetables = Vegetable.new(vegetable_params)
   end
 
+  def index
+    @patches = Patch.all
+  end
+
   def show
   end
 
   # def edit
-  #   @patch = Patch.find(params[:id])
+    # @patch = Patch.find(params[:id])
   # end
-
   private
 
   def patch_params
     params.require(:patch).permit(:vegetables)
   end
 
-  def vegetable_params
-    params.require(:vegetables).permit(:name)
+  def find_patch
+    @patch = Patch.find(params[:id])
   end
 end

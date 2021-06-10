@@ -1,0 +1,26 @@
+<div class="background pt-3">
+  <div class="pages-container">
+    <h1>Welcome <%= User.name %></h1>
+  </div>
+
+    <ul class="list-inline tabs-underlined">
+      <li>
+        <a href="#" class="tab-underlined active">My patches</a>
+      </li>
+    </ul>
+</div>
+
+<div class="background-light">
+  <div class="pages-container">
+    <div class="med-image title" style="background-image: url(<%= cl_image_path('https://res.cloudinary.com/dmixbgvgw/image/upload/v1623240571/Patched/mypatch.jpg')%>"></div>
+  </div>
+
+  <ul class="list-inline tabs-underlined">
+      <li>
+        <a href="#" class="tab-underlined active">Notifications</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<%= render 'shared/menu' %>

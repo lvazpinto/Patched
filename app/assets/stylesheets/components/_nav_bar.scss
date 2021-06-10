@@ -1,0 +1,54 @@
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: white;
+  border-top: 1px solid $oatmeal-med;
+  justify-content: space-around;
+  padding: 16px;
+
+  //give nav it's own compsite layer
+  will-change: transform;
+  transform: translateZ(0);
+  height: 83.5px;
+
+  &_item {
+    font-size: 10px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    color: $gray-dark;
+  }
+
+  &_item-active {
+    //dev
+    color: $terracotta;
+    display: flex;
+    align-items: center;
+  }
+
+  &_item-active svg {
+
+    path{
+      fill: $terracotta
+    }
+    //dev
+    fill: $terracotta;
+    display: flex;
+    align-items: center;
+  }
+
+  &_item-content {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    color: $gray-dark;
+  }
+}
+
+.mobile-bottom-nav p {
+  padding-top: 4px;
+  font-weight: 800;
+}
