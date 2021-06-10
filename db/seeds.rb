@@ -16,6 +16,7 @@ tomatoes = Vegetable.create(
 
 file1 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623153823/Patched/tomatoes.jpg")
 tomatoes.photo.attach(io: file1, filename: 'tomatoes.jpg', content_type: 'image/jpg')
+tomatoes.save
 
 
   ###creating instruction
