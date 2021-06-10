@@ -5,12 +5,16 @@
   <div class="pages-container">
     <h1>Your vegetable selection</h1>
     <p>These vegetables perfectly match your garden./n Select the vegetables you would like to grow in your patch.</p>
+      <%= simple_form_for @patchvegetable do |f| %>
+        <%= f.input :vegetable, as: :check_boxes, collection: @vegetables %>
+        <%= f.submit %>
+      <% end %>
     <h5>Select up to 5</h5>
       <%= @vegetables.each do |v| %>
         <div class="vegetable-card">
           <%= v.name %>
           <%= cl_image_tag(v.photo.key,
-      width: 100, height: 50, crop: :fill) %>
+      width: 50, height: 50, crop: :fill) %>
         </div>
       <% end %>
   </div>

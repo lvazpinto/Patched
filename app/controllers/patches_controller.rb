@@ -2,6 +2,7 @@ class PatchesController < ApplicationController
   def new
     @patch = Patch.new
     @vegetables = Vegetable.all
+    @patchvegetable = PatchVegetable.new
   end
 
   def create
