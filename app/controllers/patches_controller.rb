@@ -2,10 +2,13 @@ class PatchesController < ApplicationController
   before_action :find_patch, only: [:show, :edit]
   def new
     @patch = Patch.new
+    @vegetables = Vegetable.all
+    @patchvegetable = PatchVegetable.new
   end
 
   def create
     @patch = Patch.new(patch_params)
+    @vegetables = Vegetable.new(vegetable_params)
   end
 
   def index
