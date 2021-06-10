@@ -20,7 +20,6 @@ class PatchesController < ApplicationController
   def edit
     @vegetables = Vegetable.where('sun_score < ?', @patch.hours_of_sun)
     @patchvegetable = PatchVegetable.new
-
   end
 
   def index
@@ -37,5 +36,6 @@ class PatchesController < ApplicationController
   end
 
   def find_patch
+   @patch = Patch.find(params[:id])
   end
 end
