@@ -2,33 +2,41 @@ class PatchesController < ApplicationController
   before_action :find_patch, only: [:show, :edit]
   def new
     @patch = Patch.new
-    @vegetables = Vegetable.all
-    @patchvegetable = PatchVegetable.new
   end
 
   def create
     @patch = Patch.new(patch_params)
-    @vegetables = Vegetable.new(vegetable_params)
-  end
-
-  def index
-    @patches = Patch.all
+    @patch.user = current_user
+    if @patch.save
+      redirect_to edit_patch_path(@patch)
+    else
+      render :new
+    end
   end
 
   def show
   end
 
   def edit
-    @patch = Patch.find(params[:id])
+    @vegetables = Vegetable.where('sun_score < ?', @patch.hours_of_sun)
+    @patchvegetable = PatchVegetable.new
+
+  end
+
+  def index
+    @patches = Patch.all
+  end
+  
+  def setup
   end
 
   private
 
   def patch_params
-    params.require(:patch).permit(:vegetables)
+    params.require(:patch).permit(:hours_of_sun)
   end
 
   def find_patch
-    @patch = Patch.find(params[:id])
+
   end
 end

@@ -1,0 +1,35 @@
+.background {
+  background-color: $oatmeal-med;
+}
+
+.pages-container h1 {
+  font-size: 24px;
+  color: $terracotta;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.pages-container p {
+  font-size: 14px;
+  color: $gray-dark;
+  text-align: justify;
+  margin-top: 32px;
+  margin-bottom: 26px;
+}
+
+.pages-container h5 {
+  font-size: 16px;
+  color: $dark-olive;
+  text-align: left;
+  font-family: DM Mono;
+  font-weight: light;
+}
+
+#buttonforward {
+  margin-right: 5px;
+}
+
+.pages-container {
+  padding: 32px;
+}
+

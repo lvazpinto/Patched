@@ -7,6 +7,9 @@
     <%= link_to new_user_registration_path do %>
     <h4>Sign up</h4>
     <% end %>
+    <% if user_signed_in? %>
+    <% else %>
+    <% end %>
   </div>
   <div class="loginlink">
     <%= link_to new_user_session_path do %>

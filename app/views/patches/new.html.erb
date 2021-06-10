@@ -1,24 +1,6 @@
-<div class="background">
-  <%= link_to root_path do %>
-    <%= image_tag "button/backarrow.png", class:"buttonarrow-left" %>
-  <% end %>
-  <div class="pages-container">
-    <h1>Your vegetable selection</h1>
-    <p>These vegetables perfectly match your garden./n Select the vegetables you would like to grow in your patch.</p>
-      <%= simple_form_for @patchvegetable do |f| %>
-        <%= f.input :vegetable, as: :check_boxes, collection: @vegetables %>
-        <%= f.submit %>
-      <% end %>
-    <h5>Select up to 5</h5>
-      <%= @vegetables.each do |v| %>
-        <div class="vegetable-card">
-          <%= v.name %>
-          <%= cl_image_tag(v.photo.key,
-      width: 50, height: 50, crop: :fill) %>
-        </div>
-      <% end %>
-  </div>
-  <%= link_to root_path do %>
-    <%= image_tag "button/forwardarrow.png", class:"buttonarrow-right" %>
-  <% end %>
-</div>
+<h1>How sunny is your patch area?</h1>
+
+<%= simple_form_for @patch do |f| %>
+  <%= f.input :hours_of_sun, collection: 1..6 %>
+  <%= f.button :submit , class:"btn btn-primary" %>
+<% end %>

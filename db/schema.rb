@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_10_111006) do
+ActiveRecord::Schema.define(version: 2021_06_10_154115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,10 +63,10 @@ ActiveRecord::Schema.define(version: 2021_06_10_111006) do
   end
 
   create_table "patches", force: :cascade do |t|
-    t.integer "patch_area"
+    t.string "patch_area", default: "20"
     t.integer "hours_of_sun"
-    t.string "location"
-    t.boolean "status"
+    t.string "location", default: "Lisboa, Portugal"
+    t.string "status", default: "empty"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
