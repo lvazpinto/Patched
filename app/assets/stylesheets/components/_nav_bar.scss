@@ -1,47 +1,50 @@
-body {
-  //dev
-  //height:2000px;
-  padding:10px;
-  padding-bottom:50px;
-}
-
-h1 {
-  margin-bottom:2000px;
-}
-
 .mobile-bottom-nav {
-  position:fixed;
-  bottom:0;
-  left:0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   right: 0;
-  z-index: 1000;
+  display: flex;
+  background-color: white;
+  border-top: 1px solid $oatmeal-med;
+  justify-content: space-around;
+  padding: 16px;
 
   //give nav it's own compsite layer
-  will-change:transform;
+  will-change: transform;
   transform: translateZ(0);
+  height: 83.5px;
 
-  display:flex;
-
-  height:50px;
-
-  box-shadow: 0 -2px 5px -2px #333;
-  background-color:#fff;
-
-  &__item{
-    flex-grow:1;
-    text-align:center;
-    font-size:12px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+  &_item {
+    font-size: 10px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    color: $gray-dark;
   }
-  &__item--active{
+
+  &_item-active {
     //dev
-    color:red;
+    color: $terracotta;
+    display: flex;
+    align-items: center;
   }
-  &__item-content{
-    display:flex;
-    flex-direction:column;
+
+  &_item-active svg {
+    //dev
+    fill: $terracotta;
+    display: flex;
+    align-items: center;
   }
+
+  &_item-content {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    color: $gray-dark;
+  }
+}
+
+.mobile-bottom-nav p {
+  padding-top: 4px;
+  font-weight: 800;
 }
