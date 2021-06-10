@@ -12,7 +12,4 @@ Rails.application.routes.draw do
   resources :vegetables, only: [:vegetable_id] do
     resources :instructions, only: [:show]
   end
-  
-  resources :patch_vegetables, only: %i[create]
-
 end
