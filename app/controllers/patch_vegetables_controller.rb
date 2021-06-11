@@ -8,7 +8,7 @@ class PatchVegetablesController < ApplicationController
        patchvegetable.save
       end
     end
-    redirect_to patch_path(@current_patch)
+    redirect_to patches_path
 
   end
 end
