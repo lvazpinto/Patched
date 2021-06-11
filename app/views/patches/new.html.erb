@@ -2,15 +2,15 @@
   <%= link_to root_path do %>
     <%= image_tag "button/backarrow.png", class:"buttonarrow-left" %>
   <% end %>
-  <div class="pages-container">
+  <div class="pages-container-taller">
     <div class="form-style">
-    <%= simple_form_for @patch do |f| %>
-      <h1>What is your location?</h1>
-      <%= f.input :location, label: "Location", class:"form-control" %>
-      <h1>How sunny is your garden?</h1>
-      <%= f.input :hours_of_sun, collection: (1..6).to_a, label: "1 (very shady) 6 (very sunny)" %>
-      <%= f.button :submit, class:"btn btn-primary w-100 my-4 px-2" %>
-    <% end %>
+      <%= simple_form_for @patch do |f| %>
+        <h1>What is your location?</h1>
+        <%= f.input :location, label: "Location", class:"form-control" %>
+        <h1>How sunny is your garden?</h1>
+        <%= f.input :hours_of_sun, collection: (1..6).to_a, label: "1 (very shady) 6 (very sunny)" %>
+        <%= f.button :submit, class:"btn btn-primary w-100 my-4 px-2" %>
+      <% end %>
+    </div>
   </div>
- </div>
 </div>
