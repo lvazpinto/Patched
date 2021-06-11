@@ -1,13 +1,15 @@
 .form-control {
   background-color: $oatmeal-med;
+  border-radius: 4px;
+}
+
+.ap-input-icon svg {
+  top: 40%;
+  right: 160%;
 }
 
 .form-style h1 {
   margin-bottom: 16px;
-}
-
-.form-style.label {
-  font-size: 12px;
 }
 
 .br-widget {
