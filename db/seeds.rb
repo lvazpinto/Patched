@@ -2,6 +2,7 @@ require "open-uri"
 
 puts 'destroying existing vegetables...'
 Instruction.destroy_all
+PatchVegetable.destroy_all
 Vegetable.destroy_all
 Patch.destroy_all
 

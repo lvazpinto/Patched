@@ -38,3 +38,67 @@
   width: 262px;
   height: 262px;
 }
+
+.card-text-step {
+  text-align: justify;
+  margin: 20px 50px;
+  padding: 10px;
+}
+
+.card-text-step h5 {
+  font-color: $gray-dark;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: DM Sans;
+}
+
+.card-text-step p {
+  font-color: $gray-dark;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: DM Sans;
+}
+
+img {
+  border-radius: 5%;
+}
+
+.ellipse-1 {
+  background-color: $dark-olive;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 316px;
+  left: 22px;
+}
+
+.ellipse-2 {
+  background-color: $olive-med;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 465px;
+  left: 22px;
+}
+
+.ellipse-3 {
+  background-color: $olive-medlight;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 615px;
+  left: 22px;
+}
+
+.ellipse-4 {
+  background-color: $olive-lightest;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1004px;
+  left: 22px;
+}
