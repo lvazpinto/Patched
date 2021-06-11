@@ -10,8 +10,8 @@ $body-bg:                 $oatmeal-light;
 $font-size-base: 1rem;
 
 // Colors
-$body-color: $gray;
-$primary:    $blue;
+$body-color: $gray-dark;
+$primary:    $dark-olive;
 $success:    $green;
 $info:       $yellow;
 $danger:     $red;
@@ -23,3 +23,4 @@ $border-radius-lg: 100px;
 $border-radius-sm: 100px;
 
 // Override other variables below!
+$headings-line-height: 1.4;

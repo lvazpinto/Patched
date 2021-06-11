@@ -36,6 +36,6 @@ class PatchesController < ApplicationController
   end
 
   def find_patch
-   @patch = Patch.find(params[:id])
+    @patch = Patch.find(params[:id])
   end
 end
