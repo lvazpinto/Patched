@@ -3,12 +3,23 @@
 </div>
 <div class="background">
   <h3>Create an eco-friendly vegetable patch with our simple step-by-step guide</h3>
-  <div class="generate">
-    <%= link_to new_user_registration_path do %>
-    <h4>Sign up</h4>
-    <% end %>
     <% if user_signed_in? %>
+      <div class="generate">
+        <% if current_user.patches.present? %>
+          <%= link_to patches_path do %>
+            <h4>Get Started</h4>
+          <% end %>
+        <% else %>
+          <%= link_to new_patch_path do %>
+            <h4>Get Started</h4>
+          <% end %>
+        <% end %>
+      </div>
     <% else %>
+      <div class="generate">
+      <%= link_to new_user_registration_path do %>
+        <h4>Sign up</h4>
+      <% end %>
     <% end %>
   </div>
   <div class="loginlink">

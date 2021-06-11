@@ -23,8 +23,7 @@ class PatchesController < ApplicationController
   end
 
   def index
-    @user = current_user
-    @patches = Patch.all
+    @patches = Patch.where(user: current_user)
   end
 
   def setup

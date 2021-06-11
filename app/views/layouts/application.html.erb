@@ -13,7 +13,9 @@
   <body>
     <%= render 'shared/flashes' %>
     <div class="body-wrapper">
-        <%= yield %>
+      <%= render 'shared/navbar' %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete,  class: "nav-link" %>
+      <%= yield %>
     </div>
   </body>
 </html>
