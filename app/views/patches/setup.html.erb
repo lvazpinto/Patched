@@ -1,7 +1,11 @@
 <div>
   <div class="background pt-3">
+    <%= link_to patches_path do %>
+      <%= image_tag "button/backarrow.png", class:"buttonarrow-left" %>
+    <% end %>
+    <%= render 'shared/navbar' %>
     <div class="pages-container">
-      <h1>Set up your patch</h1>
+     <h1>Set up your patch</h1>
     </div>
     <ul class="nav nav-pills mb-3 list-inline tabs-underlined active" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
@@ -66,22 +70,27 @@
     </div>
     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
       <div class="card-text-step">
+        <div class="ellipse-1"></div>
         <h5>Step One</h5>
         <p>Start by laying cardboard over the area the new bed will occupy. This will help to clear all the grass and weeds beneath.</p>
       </div>
       <div class="card-text-step">
+        <div class="ellipse-2"></div>
         <h5>Step Two</h5>
         <p>After the grass has rotted down, remove the cardboard and lay out your raised bed frame where you would like your patch to be.</p>
       </div>
       <div class="card-text-step">
+        <div class="ellipse-3"></div>
         <h5>Step Three</h5>
-        <p>Assemble the frame or create your own with our simple guide.</p>
+        <p>Assemble the frame or <strong>create your own with our simple guide.</strong></p>
         <img class="assembly-pic" src="/assets/assempagepic.jpg">
       </div>
       <div class="card-text-step">
+        <div class="ellipse-4"></div>
         <h5>Step Four</h5>
         <p>With the walls of the raised bed fixed together, it's time to fill it. Add organic garden compost and soil to the bed. This will introduce lots of beneficial microorganisms to the soil, which will further enhance plant growth.</p>
       </div>
     </div>
   </div>
+  <%= render 'shared/menu' %>
 </div>

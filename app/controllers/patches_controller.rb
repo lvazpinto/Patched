@@ -23,6 +23,7 @@ class PatchesController < ApplicationController
   end
 
   def index
+    @user = current_user
     @patches = Patch.all
   end
 
