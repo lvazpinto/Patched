@@ -1,5 +1,5 @@
 <nav class="mobile-bottom-nav">
-  <%= link_to patches_path do %>
+  <%= link_to patch_path(current_user.patches.last) do %>
   <div class="mobile-bottom-nav_item-content">
     <div class="mobile-bottom-nav_item mobile-bottom-nav_item-active">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@
     </div>
   </div>
   <% end %>
-  <%= link_to setup_patches_path do %>
+  <%= link_to setup_patch_path(@patch) do %>
    <div class="mobile-bottom-nav_item-content">
     <div class="mobile-bottom-nav_item">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +41,7 @@
     </div>
   </div>
   <% end %>
-
+  <%= link_to planting_patch_path(@patch) do %>
   <div class="mobile-bottom-nav_item-content">
     <div class="mobile-bottom-nav_item">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,7 @@
       <p>Planting</p>
     </div>
   </div>
-
+  <% end %>
   <div class="mobile-bottom-nav_item-content">
     <div class="mobile-bottom-nav_item">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -9,7 +9,7 @@ Patch.destroy_all
 puts 'Started to create the vegetables'
 
 #creating veggie
-tomatoes = Vegetable.create(
+tomatoes = Vegetable.create!(
   name: "Tomatoes",
   growing_length: "90",
   vegetable_area:"20",
@@ -22,7 +22,7 @@ tomatoes.save
 
 
   ###creating instruction
-tomatoes_instructions = Instruction.create(
+tomatoes_instructions = Instruction.create!(
   planting_instructions_step_one: "Use your digging fork to loosen the soil to a depth of 20cm and plant your seedlings (space them 20cm apart). Spread 7cm of compost over the surface and thoroughly mix it into the soil",
   planting_instructions_step_two: "Rake the soil around the seed and press down on it to seal the soil around your seedling",
   planting_instructions_step_three: "Tie the main stem to a tall, sturdy bamboo cane and remove sideshoots that sprout from between a leaf and the main stem",
@@ -32,7 +32,7 @@ tomatoes_instructions = Instruction.create(
   harvesting_instructions_step_three: "Store picked tomatoes at room temperature indoors, or in a shady place outside",
   vegetable: tomatoes )
 
-peppers = Vegetable.create(
+peppers = Vegetable.create!(
   name: "Peppers",
   growing_length: "90",
   vegetable_area: "20",
@@ -43,7 +43,7 @@ file2 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623161649/
 peppers.photo.attach(io: file2, filename: 'peppers.jpg', content_type: 'image/jpg')
 peppers.save
 
-peppers_instructions = Instruction.create(
+peppers_instructions = Instruction.create!(
   planting_instructions_step_one: "Move young plants into your patch in late May if in an unheated greenhouse, or late May",
   planting_instructions_step_two: "Pinch out the growing tips when plants are about 20cm tall, to encourage branching, which should lead to more fruit",
   planting_instructions_step_three: "You may need to stake plants if they produce a heavy crop of large peppers",
@@ -53,18 +53,18 @@ peppers_instructions = Instruction.create(
   harvesting_instructions_step_three: "Harvest at whichever colour and stage of maturity you prefer",
   vegetable: peppers )
 
-cucumbers = Vegetable.create(
+cucumbers = Vegetable.create!(
   name: "Cucumbers",
   growing_length: "70",
   vegetable_area: "20",
   sun_score: "5,6",
-  planting_season: "Spring, Summer")
+  planting_season: "Summer")
 
 file3 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623159708/Patched/cucumber.jpg")
 cucumbers.photo.attach(io: file3, filename: 'cucumbers.jpg', content_type: 'image/jpg')
 cucumbers.save
 
-cucumbers_instructions = Instruction.create(
+cucumbers_instructions = Instruction.create!(
   planting_instructions_step_one: "Choose a warm, sheltered, sunny spot with fertile soil. Prepare the ground by digging in up to two bucketfuls of well-rotted organic matter",
   planting_instructions_step_two: "When plants have developed seven leaves, pinch out the growing tip",
   planting_instructions_step_three: "Pinch out the tips of flowerless sideshoots after seven leaves",
@@ -75,18 +75,18 @@ cucumbers_instructions = Instruction.create(
   harvesting_instructions_step_four: "Cut the stem cleanly with a sharp knife. Regular harvesting encourages further fruiting",
   vegetable: cucumbers )
 
-peas = Vegetable.create(
+peas = Vegetable.create!(
   name: "Peas",
   growing_length: "70",
   vegetable_area: "20",
   sun_score: "5,6",
-  planting_season: "Spring, Summer")
+  planting_season: "Summer")
 
 file4 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623159788/Patched/Peas.jpg")
 peas.photo.attach(io: file4, filename: 'peas.jpg', content_type: 'image/jpg')
 peas.save
 
-peas_instructions = Instruction.create(
+peas_instructions = Instruction.create!(
   planting_instructions_step_one: "Water the plants when they start to flower and two weeks after add a thick mulch around the base of the plants to help prevent the soil from drying out",
   planting_instructions_step_two: "Most peas need supports to scramble up. For taller varieties, bamboo canes and netting are ideal, while smaller varieties can be supported with pea netting or pea sticks (twiggy branches)",
   planting_instructions_step_three: "After flowering, plants need sufficient water for the pods to swell. Check the soil moisture at root level regularly and water if necessary",
@@ -94,7 +94,7 @@ peas_instructions = Instruction.create(
   harvesting_instructions_step_two: "Pods are ready to harvest when they’re well filled. Pick regularly, otherwise the plants will stop producing flowers and pods",
   vegetable: peas )
 
-chilli_peppers = Vegetable.create(
+chilli_peppers = Vegetable.create!(
   name: "Chilli Peppers",
   growing_length: "150",
   vegetable_area: "20",
@@ -105,7 +105,7 @@ file5 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623153239/
 chilli_peppers.photo.attach(io: file5, filename: 'chilli_peppers.jpg', content_type: 'image/jpg')
 chilli_peppers.save
 
-chilli_peppers_instructions = Instruction.create(
+chilli_peppers_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant your seedlings in your patch and when they reach about 20cm tall, or if they start to lean, stake with a thin cane",
   planting_instructions_step_two: "Pinch out the shoot tips when plants are about 30cm tall to encourage lots of branches, which should give you more fruit",
   planting_instructions_step_three: "Give them a warm, sheltered, sunny spot, and cover initially with fleece or cloches",
@@ -115,7 +115,7 @@ chilli_peppers_instructions = Instruction.create(
   harvesting_instructions_step_three: "Leaving chillies to ripen fully (usually to red) will suppress further fruit production",
   vegetable: chilli_peppers )
 
-zucchinis = Vegetable.create(
+zucchinis = Vegetable.create!(
   name: "Zucchinis",
   growing_length: "60",
   vegetable_area: "20",
@@ -126,7 +126,7 @@ file6 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623160461/
 zucchinis.photo.attach(io: file6, filename: 'zucchinis.jpg', content_type: 'image/jpg')
 zucchinis.save
 
-zucchinis_instructions = Instruction.create(
+zucchinis_instructions = Instruction.create!(
   planting_instructions_step_one: "Make a hole about a spade’s depth and width",
   planting_instructions_step_two: "Fill the hole with a mixture of home-made compost and then plant one courgette in the centre",
   planting_instructions_step_three: "Courgettes are thirsty plants and need regular and generous watering as they grow. When you water, try not to splash the leaves",
@@ -136,18 +136,18 @@ zucchinis_instructions = Instruction.create(
   harvesting_instructions_step_four: "The flowers can also be harvested, and have a mild courgette flavour. They can be eaten raw in salads or stuffed and fried. Use straight away, as they don’t keep for long",
   vegetable: zucchinis )
 
-beetroots = Vegetable.create(
+beetroots = Vegetable.create!(
   name: "Beetroots",
   growing_length: "65",
   vegetable_area: "20",
   sun_score: "1,2",
-  planting_season: "Spring, Summer")
+  planting_season: "Summer")
 
 file7 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623160896/Patched/beetroots.jpg")
 beetroots.photo.attach(io: file7, filename: 'beetroots.jpg', content_type: 'image/jpg')
 beetroots.save
 
-beetroots_instructions = Instruction.create(
+beetroots_instructions = Instruction.create!(
   planting_instructions_step_one: "When the seedlings are about 2.5cm high, thin out to leave one every 20cm",
   planting_instructions_step_two: "Beetroot grows best in fertile, well-drained soil",
   planting_instructions_step_three: "During dry spells, water every 10–14 days",
@@ -155,7 +155,7 @@ beetroots_instructions = Instruction.create(
   harvesting_instructions_step_two: "Pull up alternate plants once the roots are golf ball size, leaving the rest to reach maturity if you wish. Harvest these when no larger than a cricket ball",
   vegetable: beetroots)
 
-brussel_sprouts = Vegetable.create(
+brussel_sprouts = Vegetable.create!(
   name: "Brussel Sprouts",
   growing_length: "100",
   vegetable_area: "20",
@@ -166,7 +166,7 @@ file8 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623154080/
 brussel_sprouts.photo.attach(io: file8, filename: 'brussel_sprouts.jpg', content_type: 'image/jpg')
 brussel_sprouts.save
 
-brussel_sprouts_instructions = Instruction.create(
+brussel_sprouts_instructions = Instruction.create!(
   planting_instructions_step_one: "From mid-May to early June transplant them to your patch: choose a sunny site, sheltered from strong winds and water the plants well before moving them, and again afterwards",
   planting_instructions_step_two: "Water the plants regularly until they have settled in. Then water in dry weather, repeating every 10–14 days",
   planting_instructions_step_three: "In September, mound soil around the base of the stems, to provide extra support",
@@ -175,18 +175,18 @@ brussel_sprouts_instructions = Instruction.create(
   harvesting_instructions_step_three: "At the end of the season, the sprout tops can be harvested too",
   vegetable: brussel_sprouts)
 
-cabbages = Vegetable.create(
+cabbages = Vegetable.create!(
   name: "Cabbages",
   growing_length: "100",
   vegetable_area: "20",
   sun_score: "1,2",
-  planting_season: "Spring, Summer, Winter")
+  planting_season: "Winter")
 
 file9 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623160872/Patched/cabbages.jpg")
 cabbages.photo.attach(io: file9, filename: 'cabbages.jpg', content_type: 'image/jpg')
 cabbages.save
 
-cabbages_instructions = Instruction.create(
+cabbages_instructions = Instruction.create!(
   planting_instructions_step_one: "Water your seedlings well the day before planting",
   planting_instructions_step_two: "Plant 20cm apart. Set the plants in their new hole so the lowest leaves are at ground level and 'puddle’ in the plants with plenty of water – this means filling the hole with water several times before adding soil",
   planting_instructions_step_three: "Water plants in prolonged dry spells – a thorough soak every 10 days should be enough. When the heads begin to form, generous watering will greatly improve size",
@@ -195,36 +195,36 @@ cabbages_instructions = Instruction.create(
   harvesting_instructions_step_three: "If you cut a 1cm (½in) deep cross in the stump of spring and summer cabbages after harvesting, they should go on to produce a second (much smaller) cabbage",
   vegetable: cabbages)
 
-carrots = Vegetable.create(
+carrots = Vegetable.create!(
   name: "Carrots",
   growing_length: "80",
   vegetable_area: "20",
   sun_score: "3,4",
-  planting_season: "Spring, Summer")
+  planting_season: "Summer")
 
 file10 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623153241/Patched/carrots.jpg")
 carrots.photo.attach(io: file10, filename: 'carrots.jpg', content_type: 'image/jpg')
 carrots.save
 
-carrots_instructions = Instruction.create(
+carrots_instructions = Instruction.create!(
   planting_instructions_step_one: "Carrots are drought resistant so rarely need watering. However, in long dry spells they will benefit from a soaking",
   planting_instructions_step_two: "Cover crops with fleece tunnels or put up barriers around them to prevent carrot flies laying their eggs",
   harvesting_instructions_step_one: "Harvest your carrots as soon as they’re large enough to use – don’t aim for the largest roots or you’ll sacrifice flavour",
   harvesting_instructions_step_two: "Lift the roots carefully using a fork if your soil is heavy",
   vegetable: carrots)
 
-cauliflowers = Vegetable.create(
+cauliflowers = Vegetable.create!(
   name: "Cauliflowers",
   growing_length: "100",
   vegetable_area: "20",
   sun_score: "3,4",
-  planting_season: "Spring, Summer, Winter")
+  planting_season: "Winter")
 
 file11 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623160931/Patched/cauliflowers.jpg")
 cauliflowers.photo.attach(io: file11, filename: 'cauliflowers.jpg', content_type: 'image/jpg')
 cauliflowers.save
 
-cauliflowers_instructions = Instruction.create(
+cauliflowers_instructions = Instruction.create!(
   planting_instructions_step_one: "Cauliflowers do best in very fertile soil, so use put organic matter and firm the soil by treading before planting",
   planting_instructions_step_two: "To avoid problems, water plants well the day before transplanting and make a hole deep enough to hold the plant with the lowest leaves at ground level",
   planting_instructions_step_three: "Fill this hole repeatedly with water. This will fill the hole with soil and ensure the plant is sitting in a large area of moist soil. Firm the soil very well against the roots",
@@ -234,25 +234,25 @@ cauliflowers_instructions = Instruction.create(
   harvesting_instructions_step_three: "Cut the stem with a knife, taking the head and a few of the leaves beneath it",
   vegetable: cauliflowers)
 
-radishes = Vegetable.create(
+radishes = Vegetable.create!(
   name: "Radishes",
   growing_length: "70",
   vegetable_area: "20",
   sun_score: "3,4",
-  planting_season: "Spring, Summer, Winter")
+  planting_season: "Winter")
 
 file12 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623153241/Patched/radishes.jpg")
 radishes.photo.attach(io: file12, filename: 'radishes.jpg', content_type: 'image/jpg')
 radishes.save
 
-radishes_instructions = Instruction.create(
+radishes_instructions = Instruction.create!(
   planting_instructions_step_one: "Keep the soil moist to ensure rapid growth, for fleshy, tasty roots that don’t split. This can be tricky in hot dry summer weather, so take care to water regularly",
   harvesting_instructions_step_one: "Summer radishes are best harvested young, in as little as four weeks from germination, when the roots are about 2.5cm in diameter. If left to grow too large, they can become woody and inedible",
   harvesting_instructions_step_two: "Winter radishes can be left in the ground and dug up as required, or lifted in November and stored",
   harvesting_instructions_step_three: "Pull as required, and eat fresh, when crunchy and delicious",
   vegetable: radishes)
 
-arugula = Vegetable.create(
+arugula = Vegetable.create!(
   name: "Arugula",
   growing_length: "40",
   vegetable_area: "20",
@@ -263,7 +263,7 @@ file13 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623160987
 arugula.photo.attach(io: file13, filename: 'arugula.jpg', content_type: 'image/jpg')
 arugula.save
 
-arugula_instructions = Instruction.create(
+arugula_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant 20cm apart",
   planting_instructions_step_two: "Keep the soil moist, watering in dry spells, to ensure consistent growth and prevent plants running to seed (bolting) prematurely. However, take care not to overwater, as this can dilute the taste",
   planting_instructions_step_three: "Weed between the plants regularly",
@@ -272,7 +272,7 @@ arugula_instructions = Instruction.create(
   harvesting_instructions_step_two: "Pick a few leaves from each plant along the row. If you take lots of leaves from just one plant, you’ll weaken the growth",
   vegetable: arugula)
 
-kale = Vegetable.create(
+kale = Vegetable.create!(
   name: "Kale",
   growing_length: "70",
   vegetable_area: "20",
@@ -283,7 +283,7 @@ file14 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623161010
 kale.photo.attach(io: file14, filename: 'kale.jpg', content_type: 'image/jpg')
 kale.save
 
-kale_instructions = Instruction.create(
+kale_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant 20cm apart",
   planting_instructions_step_two: "'Puddle' in the plants with plenty of water",
   planting_instructions_step_three: "Water well in dry weather",
@@ -292,7 +292,7 @@ kale_instructions = Instruction.create(
   harvesting_instructions_step_two: "Pick shoots that are 10–15cm long and still young",
   vegetable: kale)
 
-leeks = Vegetable.create(
+leeks = Vegetable.create!(
   name: "Leeks",
   growing_length: "150",
   vegetable_area: "20",
@@ -303,7 +303,7 @@ file15 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623161595
 leeks.photo.attach(io: file15, filename: 'leeks.jpg', content_type: 'image/jpg')
 leeks.save
 
-leeks_instructions = Instruction.create(
+leeks_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant 20cm apart",
   planting_instructions_step_two: "To increase the length of white stem, gently draw up dry soil around the plants in stages as they grow, but try not to let soil fall in between the leaves",
   planting_instructions_step_three: "Water during long dry spells and weed regularly",
@@ -312,18 +312,18 @@ leeks_instructions = Instruction.create(
   harvesting_instructions_step_three: "Leeks can remain in the ground through the winter until they are needed",
   vegetable: leeks)
 
-lettuce = Vegetable.create(
+lettuce = Vegetable.create!(
   name: "Lettuce",
   growing_length: "60",
   vegetable_area: "20",
   sun_score: "1,2",
-  planting_season: "Spring, Summer")
+  planting_season: "Spring")
 
 file16 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623160163/Patched/lettuce.jpg")
 lettuce.photo.attach(io: file16, filename: 'lettuce.jpg', content_type: 'image/jpg')
 lettuce.save
 
-lettuce_instructions = Instruction.create(
+lettuce_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant 20cm apart",
   planting_instructions_step_two: "Water when the soil is dry, ideally early in the morning",
   planting_instructions_step_three: "Early in the year, sparrows can be a problem as they find young lettuce plants irresistible. Protect with fleece, chicken wire or similar",
@@ -332,18 +332,18 @@ lettuce_instructions = Instruction.create(
   harvesting_instructions_step_three: "Loose-leaf varieties can be harvested as soon as the leaves are big enough to be worth eating – either by snipping a few outer leaves from each plant or cutting the whole lot from one plant",
   vegetable: lettuce)
 
-spinach = Vegetable.create(
+spinach = Vegetable.create!(
   name: "Spinach",
   growing_length: "40",
   vegetable_area: "20",
   sun_score: "1,2",
-  planting_season: "Spring, Autumn")
+  planting_season: "Autumn")
 
 file17 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623248430/Patched/spinach.jpg")
 spinach.photo.attach(io: file17, filename: 'spinach.jpg', content_type: 'image/jpg')
 spinach.save
 
-spinach_instructions = Instruction.create(
+spinach_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant 20cm apart",
   planting_instructions_step_two: "A few weeks later, harvest every alternate plant for use in the kitchen, giving the rest more room to grow",
   planting_instructions_step_three: "Keep well watered during dry periods in summer",
@@ -352,18 +352,18 @@ spinach_instructions = Instruction.create(
   harvesting_instructions_step_two: "To prevent the leaves tasting bitter, make sure the soil is rich by digging in plenty of organic matter, such as garden compost, before sowing",
   vegetable: spinach)
 
-parsley = Vegetable.create(
+parsley = Vegetable.create!(
   name: "Parsley",
   growing_length: "90",
   vegetable_area: "20",
   sun_score: "1,2",
-  planting_season: "Spring, Summer")
+  planting_season: "Spring")
 
 file18 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623161263/Patched/parsley.jpg")
 parsley.photo.attach(io: file18, filename: 'parsley.jpg', content_type: 'image/jpg')
 parsley.save
 
-parsley_instructions = Instruction.create(
+parsley_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant 20cm apart",
   planting_instructions_step_two: "Keep plants well watered, especially during hot, dry spells in summer",
   planting_instructions_step_three: "Remove flowerheads to extend the cropping life of the plants",
@@ -373,7 +373,7 @@ parsley_instructions = Instruction.create(
   harvesting_instructions_step_three: "To freeze, chop the leaves and add to an ice-cube tray, then top up with water and freeze. You can then simply add the cubes to your cooking whenever needed",
   vegetable: parsley)
 
-cilantro = Vegetable.create(
+cilantro = Vegetable.create!(
   name: "Cilantro",
   growing_length: "70",
   vegetable_area: "20",
@@ -384,7 +384,7 @@ file19 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623161354
 cilantro.photo.attach(io: file19, filename: 'cilantro.jpg', content_type: 'image/jpg')
 cilantro.save
 
-cilantro_instructions = Instruction.create(
+cilantro_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant 20cm apart",
   planting_instructions_step_two: "Plants do not normally need feeding, but the occasional liquid feed of a balanced fertiliser can be used as a pick-me-up",
   planting_instructions_step_three: "Weed regularly around plants grown for seed production and to prevent a check to growth",
@@ -392,7 +392,7 @@ cilantro_instructions = Instruction.create(
   harvesting_instructions_step_two: "When plants start to flower, either pick the blooms to add to salads, or leave them to form seeds",
   vegetable: cilantro)
 
-chives = Vegetable.create(
+chives = Vegetable.create!(
   name: "Chives",
   growing_length: "90",
   vegetable_area: "20",
@@ -403,7 +403,7 @@ file20 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623161398
 chives.photo.attach(io: file20, filename: 'chives.jpg', content_type: 'image/jpg')
 chives.save
 
-chives_instructions = Instruction.create(
+chives_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant 20cm apart",
   planting_instructions_step_two: "Keep plants well watered, especially during long dry spells in summer",
   planting_instructions_step_three: "Chives die back in late autumn. Keep plants looking tidy by clearing away debris",
@@ -411,7 +411,7 @@ chives_instructions = Instruction.create(
   harvesting_instructions_step_two: "To keep chives productive, remove faded flowers or use the edible blooms when young to brighten salads",
   vegetable: chives)
 
-rosemary = Vegetable.create(
+rosemary = Vegetable.create!(
   name: "Rosemary",
   growing_length: "160",
   vegetable_area: "20",
@@ -422,7 +422,7 @@ file21 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623161377
 rosemary.photo.attach(io: file21, filename: 'rosemary.jpg', content_type: 'image/jpg')
 rosemary.save
 
-rosemary_instructions = Instruction.create(
+rosemary_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant 20cm apart",
   planting_instructions_step_two: "To keep plants compact, cut back stems after the blooms start to fade",
   harvesting_instructions_step_one: "Rosemary can be harvested all year round, but the soft new growth in summer has the best flavour",
@@ -430,18 +430,18 @@ rosemary_instructions = Instruction.create(
   harvesting_instructions_step_three: "The leaves can be used fresh or dried for later use",
   vegetable: rosemary)
 
-basil = Vegetable.create(
+basil = Vegetable.create!(
   name: "Basil",
   growing_length: "30",
   vegetable_area: "20",
   sun_score: "3,4",
-  planting_season: "Spring, Summer")
+  planting_season: "Spring")
 
 file22 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623160331/Patched/basil.jpg")
 basil.photo.attach(io: file22, filename: 'basil.jpg', content_type: 'image/jpg')
 basil.save
 
-basil_instructions = Instruction.create(
+basil_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant basil outside after all danger of frost has passed, choosing a sunny, sheltered spot with well-drained soil",
   planting_instructions_step_two: "Basil hates having wet roots overnight, so aim to water plants in the morning if possible",
   planting_instructions_step_three: "Keep plants bushy and productive by pinching the tips of branches regularly and remove any flowers that start to develop",
@@ -450,7 +450,7 @@ basil_instructions = Instruction.create(
   harvesting_instructions_step_three: "If only a few leaves are required, remove the tops of plants to encourage bushy growth",
   vegetable: basil)
 
-dill = Vegetable.create(
+dill = Vegetable.create!(
   name: "Dill",
   growing_length: "14",
   vegetable_area: "20",
@@ -461,7 +461,7 @@ file23 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623160828
 dill.photo.attach(io: file23, filename: 'dill.jpg', content_type: 'image/jpg')
 dill.save
 
-dill_instructions = Instruction.create(
+dill_instructions = Instruction.create!(
   planting_instructions_step_one: "Do not allow soil or compost to dry out. Water plants regularly, especially during hot, dry summers, but do not over water",
   planting_instructions_step_two: "Support plants with garden canes or twiggy sticks to prevent them toppling over in a gust of wind",
   planting_instructions_step_three: "Avoid growing dill near fennel, as the two can cross breed resulting in undesirable seedlings with poor flavour",
@@ -470,7 +470,7 @@ dill_instructions = Instruction.create(
   harvesting_instructions_step_three: "The seeds can be gathered in late summer when they start to ripen and turn brown – cut whole stems and put the seedhead in a paper bag, then hang the stems upside down until the seeds dry and drop. Remove any bits of stem, then store the seeds in an air-tight container. The seeds can be used ground or whole",
   vegetable: dill)
 
-thyme = Vegetable.create(
+thyme = Vegetable.create!(
   name: "Thyme",
   growing_length: "28",
   vegetable_area: "20",
@@ -481,7 +481,7 @@ file24 = URI.open("https://res.cloudinary.com/dmixbgvgw/image/upload/v1623161329
 thyme.photo.attach(io: file24, filename: 'thyme.jpg', content_type: 'image/jpg')
 thyme.save
 
-thyme_instructions = Instruction.create(
+thyme_instructions = Instruction.create!(
   planting_instructions_step_one: "Plant your thyme seedlings 20cm apart",
   planting_instructions_step_two: "Remove fallen leaves that settle on thyme plants in autumn to prevent rotting",
   planting_instructions_step_three: "Protect plants from excessive winter wet by placing in a rain shadow or a dry, light position",

@@ -6,7 +6,7 @@
     <% if user_signed_in? %>
       <div class="generate">
         <% if current_user.patches.present? %>
-          <%= link_to patches_path do %>
+          <%= link_to patch_path(current_user.patches.last) do %>
             <h4>Get Started</h4>
           <% end %>
         <% else %>

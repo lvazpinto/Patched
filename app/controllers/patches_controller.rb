@@ -1,5 +1,6 @@
 class PatchesController < ApplicationController
-  before_action :find_patch, only: [:show, :edit]
+  before_action :find_patch, except: [:new, :create]
+
   def new
     @patch = Patch.new
   end
@@ -15,16 +16,26 @@ class PatchesController < ApplicationController
   end
 
   def show
+    @patches = current_user.patches.find(params[:id])
   end
 
   def edit
     @vegetables = Vegetable.where('sun_score < ?', @patch.hours_of_sun)
-    @patchvegetable = PatchVegetable.new
   end
 
-  def index
-    @patches = Patch.where(user: current_user)
+  def update
+    @patch.update(patch_params)
+
+    redirect_to patch_path(@patch)
   end
+
+  def planting
+    @vegetables = @patch.vegetables
+  end
+
+  def harvesting
+  end
+
 
   def setup
   end
@@ -32,7 +43,7 @@ class PatchesController < ApplicationController
   private
 
   def patch_params
-    params.require(:patch).permit(:hours_of_sun)
+    params.require(:patch).permit(:hours_of_sun, vegetable_ids: [])
   end
 
   def find_patch
