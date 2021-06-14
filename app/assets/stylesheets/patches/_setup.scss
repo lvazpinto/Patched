@@ -10,6 +10,8 @@
   border-radius: 5%;
   border: none;
   text-align: left;
+  width: 165px;
+  height: 164px;
 }
 
 .card-img-top {
@@ -63,42 +65,7 @@ img {
   border-radius: 5%;
 }
 
-.ellipse-1 {
-  background-color: $dark-olive;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  position: absolute;
-  top: 333px;
-  left: 22px;
+ul {
+  list-style-image: url('Ellipse1.png');
 }
 
-.ellipse-2 {
-  background-color: $olive-med;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  position: absolute;
-  top: 481px;
-  left: 22px;
-}
-
-.ellipse-3 {
-  background-color: $olive-medlight;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  position: absolute;
-  top: 630px;
-  left: 22px;
-}
-
-.ellipse-4 {
-  background-color: $olive-lightest;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  position: absolute;
-  top: 1020px;
-  left: 22px;
-}

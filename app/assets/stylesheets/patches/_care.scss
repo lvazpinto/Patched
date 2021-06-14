@@ -1,0 +1,52 @@
+.watering-pic {
+  width: 262px;
+  height: 262px;
+}
+
+.large-card-extra {
+  border-radius: 5%;
+  border: none;
+  text-align: left;
+  background-color: white;
+  margin: auto;
+  padding: 10px;
+}
+
+.p-big {
+  font-family: DM Sans;
+  font-size: 16px;
+  color: $dark-olive;
+  font-weight: bold;
+}
+
+.header-small {
+  font-family: DM Sans;
+  font-size: 12px;
+  color: $gray-meddark;
+  font-weight: bold;
+}
+
+.container-small-card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.small-card-extra {
+  margin: auto;
+  border-radius: 5%;
+  background-color: white;
+  padding: 10px;
+}
+
+.small-card-pic {
+  height: 25px;
+  width: 25px;
+}
+
+.card-weed {
+  display: flex;
+}
+
+ul {
+  list-style-image: url('Ellipse1.png');
+}

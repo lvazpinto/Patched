@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       post 'patchvegetables/create', controller: 'patch_vegetables', action: :create
 
     collection do
-      get :setup
+      get :setup, :care
     end
   end
 
