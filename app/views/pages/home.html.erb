@@ -1,30 +1,32 @@
-<div>
-  <%= image_tag "guy-in-garden@2x.png", class:"img-signup" %>
-</div>
 <div class="background">
+  <%= image_tag "man-in-garden.jpg", class: "img-signup" %>
+  <div class="pages-container-taller">
   <h3>Create an eco-friendly vegetable patch with our simple step-by-step guide</h3>
     <% if user_signed_in? %>
-      <div class="generate">
         <% if current_user.patches.present? %>
-          <%= link_to patches_path do %>
-            <h4>Get Started</h4>
+          <%= link_to patches_path, class:"btn btn-primary w-100" do %>
+            Get Started
           <% end %>
         <% else %>
-          <%= link_to new_patch_path do %>
-            <h4>Get Started</h4>
+          <%= link_to new_patch_path, class:"btn btn-primary w-100" do %>
+            Get Started
           <% end %>
         <% end %>
+        <div class="link-center">
+        <%= link_to new_user_session_path do %>
+          Log in
+        <% end %>
+        </div>
       </div>
     <% else %>
-      <div class="generate">
-      <%= link_to new_user_registration_path do %>
-        <h4>Sign up</h4>
-      <% end %>
+        <%= link_to new_user_registration_path, class:"btn btn-primary w-100" do %>
+           Sign up
+        <% end %>
+        <div class="link-center">
+        <%= link_to new_user_session_path do %>
+           Log in
+        <% end %>
+      </div>
     <% end %>
   </div>
-  <div class="loginlink">
-    <%= link_to new_user_session_path do %>
-    <h4>Log in</h4>
-    <% end %>
-  </div>
-</div>
+ </div>
