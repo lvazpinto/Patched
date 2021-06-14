@@ -1,32 +1,17 @@
 <div class="background">
-  <%= image_tag "guy-in-garden.jpg", class: "img-signup" %>
+  <%= image_tag "man-in-garden.jpg", class: "img-signup" %>
+  
   <div class="pages-container-taller">
-  <h3>Create an eco-friendly vegetable patch with our simple step-by-step guide</h3>
+    <h3>Create an eco-friendly vegetable patch with our simple step-by-step guide</h3>
+
     <% if user_signed_in? %>
-        <% if current_user.patches.present? %>
-          <%= link_to patches_path, class:"btn btn-primary w-100" do %>
-            Get Started
-          <% end %>
-        <% else %>
-          <%= link_to new_patch_path, class:"btn btn-primary w-100" do %>
-            Get Started
-          <% end %>
-        <% end %>
-        <div class="link-center">
-        <%= link_to new_user_session_path do %>
-          Log in
-        <% end %>
-        </div>
-      </div>
+      <%= link_to 'Get Started', new_patch_path, class: "btn btn-primary w-100" %>
     <% else %>
-        <%= link_to new_user_registration_path, class:"btn btn-primary w-100" do %>
-           Sign up
-        <% end %>
-        <div class="link-center">
-        <%= link_to new_user_session_path do %>
-           Log in
-        <% end %>
+      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary w-100" %>
+
+      <div class="link-center">
+        <%= link_to 'Log in', new_user_session_path %>
       </div>
     <% end %>
   </div>
- </div>
+</div>
