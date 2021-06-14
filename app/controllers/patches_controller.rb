@@ -8,6 +8,7 @@ class PatchesController < ApplicationController
   def create
     @patch = Patch.new(patch_params)
     @patch.user = current_user
+
     if @patch.save
       redirect_to edit_patch_path(@patch)
     else
@@ -26,7 +27,7 @@ class PatchesController < ApplicationController
   def update
     @patch.update(patch_params)
 
-    redirect_to patches_path
+    redirect_to patch_path(@patch)
   end
 
   def planting
