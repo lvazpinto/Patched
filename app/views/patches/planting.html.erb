@@ -11,14 +11,17 @@
         </li>
       </ul>
 </div>
+
 <div class="background-light">
   <h3>Spring</h3>
     <% @vegetables.each do |vegetable| %>
     <div class="vegetable-card-slider mb-3">
       <%= cl_image_tag(vegetable.photo.key, width: 80, height: 80, crop: :fill) %>
+
       <div class="vegetable-card-content">
         <h5><%= vegetable.name %></h5>
         <p><%= pluralize(vegetable.days_until_planting, 'day') %> to go until planting</p>
+
         <div class="progress">
           <div class="progress-bar" role="progressbar" style="width: <%= 100 - (vegetable.days_until_planting * 100 / 365) %>%;" aria-valuenow="<%= vegetable.days_until_planting %>" aria-valuemin="0" aria-valuemax="365"></div>
         </div>
@@ -26,4 +29,6 @@
     </div>
   <% end %>
 </div>
+
 <%= render 'shared/menu' %>
+

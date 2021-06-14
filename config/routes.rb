@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#home'
 
-  resources :patches, except: %i[destroy]  do
-    collection do
-      get :setup
+  devise_for :users, controllers: { registrations: "registrations" }
+
+  resources :patches, except: %i[destroy index]  do
+    member do
+      get :setup, :care, :planting, :harvesting
     end
   end
 

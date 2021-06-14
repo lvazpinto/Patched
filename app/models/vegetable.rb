@@ -21,19 +21,23 @@ class Vegetable < ApplicationRecord
       start_day: 20
     }
   ]
+
   has_many :patch_vegetables
   has_many :instructions
   has_many :patches, through: :patch_vegetables
   has_one_attached :photo
   validates :planting_season, inclusion: { in: SEASONS.map { |season| season[:name] }}
+
   def days_until_planting
     date = SEASONS.find { |season| season[:name] == planting_season }
     today = Date.today
+
     if date[:start_month] >= today.month && date[:start_day] >= today.day
       season_date = Date.new(today.year, date[:start_month], date[:start_day])
     else
       season_date = Date.new(today.year + 1, date[:start_month], date[:start_day])
     end
+
     (season_date - today).to_i
   end
 end

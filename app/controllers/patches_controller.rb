@@ -1,5 +1,5 @@
 class PatchesController < ApplicationController
-  before_action :find_patch, only: [:show, :edit, :update]
+  before_action :find_patch, except: [:new, :create]
 
   def new
     @patch = Patch.new
@@ -16,7 +16,7 @@ class PatchesController < ApplicationController
   end
 
   def show
-    @patches = Patch.where(user: current_user)
+    @patches = current_user.patches.find(params[:id])
   end
 
   def edit
@@ -25,6 +25,7 @@ class PatchesController < ApplicationController
 
   def update
     @patch.update(patch_params)
+
     redirect_to patches_path
   end
 
@@ -35,7 +36,18 @@ class PatchesController < ApplicationController
   def harvesting
   end
 
+  def planting
+    @vegetables = @patch.vegetables
+  end
+
+  def harvesting
+  end
+
+
   def setup
+  end
+
+  def care
   end
 
   private
