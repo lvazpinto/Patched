@@ -2,17 +2,20 @@
   <%= link_to new_patch_path do %>
     <%= image_tag "button/backarrow.png", class:"buttonarrow-left" %>
   <% end %>
+
   <div class="pages-container">
     <h1>Your vegetable selection</h1>
     <p>These vegetables perfectly match your garden.</p>
     <p>Select the vegetables you would like to grow in your patch.</p>
     <h5>Select up to 5</h5>
+
     <%= simple_form_for @patch do |f| %>
       <%= f.association :vegetables,
         as: :check_boxes,
         collection: @vegetables,
         legend_tag: false,
         item_wrapper_class: 'd-none' %>
+
       <% @vegetables.each do |vegetable| %>
         <a href="#" class="vegetable-card" data-target="patch_vegetable_ids_<%= vegetable.id %>">
           <%= cl_image_tag vegetable.photo.key, width: 50, height: 50, crop: :fill, class: 'vegetable-photo' %>
@@ -24,6 +27,7 @@
           </div>
         </a>
       <% end %>
+
       <div class="action">
         <%= f.submit "Generate your patch", class:"gen-text" %>
       </div>
