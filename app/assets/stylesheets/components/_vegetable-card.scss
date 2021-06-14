@@ -12,21 +12,34 @@
   font-size: 16px;
   color: $dark-olive;
   text-align: left;
-}
-.vegetable-card1 {
-    background: white;
-    border: 1px solid #F4F1ED;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(245, 238, 238, 0.94);
+
+  &.checked {
+    .check {
+      border-radius: 10px;
+      width: 30px;
+      height: 30px;
+      background: $dark-olive;
+
+      .tick {
+        display: block;
+      }
+    }
+  }
+
+  .vegetable-photo {
     border-radius: 10px;
-    width: 211px;
-    height: 78px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    font-size: 16px;
-    color: $dark-olive;
-    text-align: left;
+  }
+
+  .check {
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    background: $olive-lightest;
+
+    .tick {
+      display: none;
+    }
+  }
 }
 
 .action {
