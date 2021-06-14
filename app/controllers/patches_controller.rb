@@ -29,6 +29,9 @@ class PatchesController < ApplicationController
   def setup
   end
 
+  def care
+  end
+
   private
 
   def patch_params

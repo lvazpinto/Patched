@@ -1,0 +1,134 @@
+<div>
+  <div class="background pt-3">
+    <%= render 'shared/navbar' %>
+    <div class="pages-container">
+     <h1>Care for your patch</h1>
+    </div>
+    <ul class="nav nav-pills mb-3 list-inline tabs-underlined active" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active tab-underlined" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Watering</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link tab-underlined" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pests</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link tab-underlined" id="pills-weeds-tab" data-bs-toggle="pill" data-bs-target="#pills-weeds" type="button" role="tab" aria-controls="pills-weeds" aria-selected="false">Weeds</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link tab-underlined" id="pills-soil-tab" data-bs-toggle="pill" data-bs-target="#pills-soil" type="button" role="tab" aria-controls="pills-soil" aria-selected="false">Soil</button>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <div>
+        <div class="container-small-card">
+          <div class="small-card-extra">
+            <h6 class="header-small">Frequency</h6>
+            <p class="p-big">Once a week</p>
+          </div>
+          <div class="small-card-extra">
+            <h6 class="header-small">Amount</h6>
+            <p class="p-big">2-5cm</p>
+          </div>
+        </div>
+        <div class="steps-container">
+          <div class="card-step">
+            <ul>
+              <li>Water your patch with an inch or two of water per week. We recommend using a garden hose for convenience but you can also use a watering can.</li>
+            </ul>
+          </div>
+          <div class="card-step">
+            <ul>
+              <li>Aim to water the roots of the plant, not the leaves.</li>
+            </ul>
+          </div>
+          <div class="card-step">
+            <ul>
+              <li>To avoid water waste setup a rainwater collector in your garden.</li>
+            </ul>
+            <%= image_tag "watering.jpg", class: "watering-pic" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <div class="large-card-extra">
+        <h6 class="header-small">Frequency</h6>
+        <p class="p-big">Check once a week</p>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="pills-weeds" role="tabpanel" aria-labelledby="pills-weeds-tab">
+      <div>
+        <div class="large-card-extra">
+          <h6 class="header-small">Frequency</h6>
+          <p class="p-big">Weed once a week</p>
+        </div>
+        <div>
+          <div class="card-step">
+            <ul>
+              <li>Manually remove weeds from your garden to avoid buildup. This will prevent you from needing to use any nasty chemicals.</li>
+            </ul>
+          </div>
+          <div class="card-step">
+            <ul>
+              <li>Pull them out gently, try to remove the whole weed, including the roots.</li>
+            </ul>
+          </div>
+          <div class="care-card">
+            <h6>What to look out for</h6>
+            <p>Here are some common weeds to pull out of your patch.</p>
+          </div>
+          <div class="cards-container-weeds">
+            <div class="card-weed">
+              <%= image_tag "fat-hen-weed.jpg", class: "small-card-pic" %>
+              <h6>Fat hen</h6>
+            </div>
+            <div class="card-weed">
+              <%= image_tag "sticky-weed.jpg", class: "small-card-pic" %>
+              <h6>Sticky weed</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="pills-soil" role="tabpanel" aria-labelledby="pills-soil-tab">
+      <div>
+        <div class="container-small-card">
+          <div class="small-card-extra">
+            <h6 class="header-small">Frequency</h6>
+            <p class="p-big">Once a year</p>
+          </div>
+          <div class="small-card-extra">
+            <h6 class="header-small">Layer depth</h6>
+            <p class="p-big">5cm</p>
+          </div>
+        </div>
+        <div class="card-step">
+          <ul>
+            <li>Spread a 5cm layer of organic mulch over your patch once or twice a year, to keep your soil rich and to keep weeds and pests at bay. It will also reduce water evaporation.</li>
+          </ul>
+        </div>
+        <div class="care-card">
+          <h6>Organic mulches</h6>
+          <p>Here are some mulches we recommend for your patch.</p>
+        </div>
+        <div class="cards-container-weeds">
+          <div class="card-weed">
+            <%= image_tag "hay.jpg", class: "small-card-pic" %>
+            <h6>Hay or straw</h6>
+          </div>
+          <div class="card-weed">
+            <%= image_tag "woodchip.jpg", class: "small-card-pic" %>
+            <h6>Woodchip</h6>
+          </div>
+          <div class="card-weed">
+            <%= image_tag "leaves.jpg", class: "small-card-pic" %>
+            <h6>Leaves</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render 'shared/menu' %>
+</div>
