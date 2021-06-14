@@ -1,5 +1,8 @@
-<div class="background">
-  <h2>Log in</h2>
+<div class="pages-container-taller">
+  <%= link_to root_path do %>
+    <%= image_tag "button/backarrow.png", class:"buttonarrow-left" %>
+  <% end %>
+  <h1>Log in</h1>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
@@ -14,9 +17,11 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
+      <%= f.button :submit, "Log in", class:"btn btn-primary w-100 my-3" %>
     </div>
   <% end %>
 
+  <div class="link-center">
   <%= render "devise/shared/links" %>
+  </div>
 </div>

@@ -3,13 +3,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
 
   resources :patches, except: %i[destroy index]  do
-    collection do
-    end
-
     member do
-      get :setup
-      get :planting
-      get :harvesting
+      get :setup, :care, :planting, :harvesting
     end
   end
 
