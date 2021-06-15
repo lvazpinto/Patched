@@ -7,9 +7,6 @@ Rails.application.routes.draw do
     member do
       get :setup, :care, :planting, :harvesting
     end
-  end
-
-  resources :vegetables, only: [:vegetable_id] do
-    resources :instructions, only: [:show]
+    resources :vegetables, only: :show
   end
 end
