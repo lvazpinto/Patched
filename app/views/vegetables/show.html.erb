@@ -11,7 +11,8 @@
         <button class="nav-link tab-underlined" id="pills-instructions-tab" href="#pills-instructions" data-toggle="pill" role="tab" aria-controls="pills-instructions" aria-selected="false">Instructions</button>
       </li>
     </ul>
-    </div>
+  </div>
+
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-need" role="tabpanel" aria-labelledby="pills-need-tab">
       <div class="cards-container">
@@ -65,59 +66,16 @@
         </div>
       </div>
     </div>
+
     <div class="tab-pane fade" id="pills-instructions" role="tabpanel" aria-labelledby="pills-instructions-tab">
-      <div class="container-small-card">
-        <div class="small-card-extra">
-          <h6 class="header-small">Space needed</h6>
-          <p class="p-big"><%=@vegetable.vegetable_area%>cm</p>
-        </div>
-        <div class="small-card-extra">
-          <h6 class="header-small">Full growth duration</h6>
-          <p class="p-big"><%= pluralize(@vegetable.growing_length, 'day') %></p>
-        </div>
-      </div>
-      <div class="card-text-step">
-        <% if @instruction.planting_instructions_step_one.present? %>
-        <ul>
-          <li class="list-bullets-1">
-            <h5>Step One</h5>
-            <p><%= @instruction.planting_instructions_step_one %></p>
-          </li>
-        </ul>
-        <% end %>
-      </div>
-      <div class="card-text-step">
-        <% if @instruction.planting_instructions_step_two.present? %>
-        <ul>
-          <li class="list-bullets-2">
-            <h5>Step Two</h5>
-            <p><%= @instruction.planting_instructions_step_two %></p>
-          </li>
-        </ul>
-       <% end %>
-      </div>
-      <div class="card-text-step">
-        <% if @instruction.planting_instructions_step_three.present? %>
-        <ul>
-          <li class="list-bullets-3">
-            <h5>Step Three</h5>
-            <p><%= @instruction.planting_instructions_step_three %></p>
-          </li>
-        </ul>
-       <% end %>
-      </div>
-      <div class="card-text-step">
-        <% if @instruction.planting_instructions_step_four.present? %>
-        <ul>
-          <li class="list-bullets-4">
-            <h5>Step Four</h5>
-            <p><%= @instruction.planting_instructions_step_four %></p>
-          </li>
-        </ul>
-        <% end %>
-      </div>
+      <% if params[:instruction_type] == 'planting' %>
+        <%= render 'instructions_planting' %>
+      <% else %>
+        <%= render 'instructions_harvesting' %>
+      <% end %>
     </div>
   </div>
+
   <%= render 'shared/menu' %>
 </div>
 

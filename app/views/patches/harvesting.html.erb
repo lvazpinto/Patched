@@ -15,7 +15,7 @@
 <div class="background-light">
   <div class="harvesting-wraper mt-4 mx-4">
     <% @patch_vegetables.each do |pv| %>
-      <div class="vegetable-card-slider mb-3">
+      <%= link_to patch_vegetable_path(@patch, pv.vegetable, instruction_type: 'harvesting'), class: 'vegetable-card-slider mb-3' do %>
         <%= cl_image_tag(pv.vegetable.photo.key, width: 58, height: 58, crop: :fill, radius: 10)%>
 
         <div class="vegetable-card-content">
@@ -30,7 +30,7 @@
             <div class="progress-bar" role="progressbar" style="width: <%= 100 - (pv.days_until_harvest * 100 / pv.vegetable.growing_length) %>%; background-color: #900B63;" aria-valuenow="<%= pv.days_until_harvest %>" aria-valuemin="0" aria-valuemax="<%= pv.vegetable.growing_length %>"></div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>

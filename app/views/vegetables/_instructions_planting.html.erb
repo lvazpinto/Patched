@@ -1,0 +1,54 @@
+<div class="container-small-card">
+  <div class="small-card-extra">
+    <h6 class="header-small">Space needed</h6>
+    <p class="p-big"><%= @vegetable.vegetable_area %>cm</p>
+  </div>
+  <div class="small-card-extra">
+    <h6 class="header-small">Full growth duration</h6>
+    <p class="p-big"><%= pluralize(@vegetable.growing_length, 'day') %></p>
+  </div>
+</div>
+
+<% if @instruction.planting_instructions_step_one.present? %>
+  <div class="card-text-step">
+    <ul>
+      <li class="list-bullets-1">
+        <h5>Step One</h5>
+        <p><%= @instruction.planting_instructions_step_one %></p>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
+<% if @instruction.planting_instructions_step_two.present? %>
+  <div class="card-text-step">
+    <ul>
+      <li class="list-bullets-2">
+        <h5>Step Two</h5>
+        <p><%= @instruction.planting_instructions_step_two %></p>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
+<% if @instruction.planting_instructions_step_three.present? %>
+  <div class="card-text-step">
+    <ul>
+      <li class="list-bullets-3">
+        <h5>Step Three</h5>
+        <p><%= @instruction.planting_instructions_step_three %></p>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
+<% if @instruction.planting_instructions_step_four.present? %>
+  <div class="card-text-step">
+    <ul>
+      <li class="list-bullets-4">
+        <h5>Step Four</h5>
+        <p><%= @instruction.planting_instructions_step_four %></p>
+      </li>
+    </ul>
+  </div>
+<% end %>

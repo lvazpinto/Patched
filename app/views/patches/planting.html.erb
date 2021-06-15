@@ -15,7 +15,7 @@
 <div class="background-light">
   <div class="planting-wraper mt-4 mx-4">
     <% @vegetables.each do |vegetable| %>
-      <%= link_to patch_vegetable_path(@patch, vegetable), class: 'vegetable-card-slider mb-3' do %>
+      <%= link_to patch_vegetable_path(@patch, vegetable, instruction_type: 'planting'), class: 'vegetable-card-slider mb-3' do %>
         <%= cl_image_tag(vegetable.photo.key, width: 58, height: 58, crop: :fill, radius: 10) %>
 
         <div class="vegetable-card-content">
