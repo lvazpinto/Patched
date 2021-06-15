@@ -35,6 +35,7 @@ class PatchesController < ApplicationController
   end
 
   def harvesting
+    @patch_vegetables = @patch.patch_vegetables.planted
   end
 
   def setup

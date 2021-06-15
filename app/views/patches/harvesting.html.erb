@@ -1,0 +1,36 @@
+<div class="background pt-3">
+  <%= link_to root_path do %>
+    <%= image_tag "button/backarrow.png", class:"buttonarrow-left" %>
+  <% end %>
+  <div class="pages-container">
+      <h1>Harvesting</h1>
+  </div>
+      <ul class="list-inline tabs-underlined">
+        <li>
+          <a href="#" class="tab-underlined active">Vegetables</a>
+        </li>
+      </ul>
+  </div>
+
+<div class="background-light">
+  <% @patch_vegetables.each do |pv| %>
+    <div class="vegetable-card-slider mb-3">
+      <%= cl_image_tag(pv.vegetable.photo.key, width: 80, height: 80, crop: :fill) %>
+      <div class="vegetable-card-content">
+        <h5><%= pv.vegetable.name %></h5>
+        <% if pv.days_until_harvest.zero? %>
+          <p>Ready to harvest!</p>
+        <% else %>
+          <p><%= pluralize(pv.days_until_harvest, 'day') %> until harvest</p>
+        <% end %>
+
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: <%= 100 - (pv.days_until_harvest * 100 / pv.vegetable.growing_length) %>%;" aria-valuenow="<%= pv.days_until_harvest %>" aria-valuemin="0" aria-valuemax="<%= pv.vegetable.growing_length %>"></div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'shared/menu' %>
+
