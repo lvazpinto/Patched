@@ -23,7 +23,7 @@ class Vegetable < ApplicationRecord
   ]
 
   has_many :patch_vegetables
-  has_many :instructions
+  has_one :instruction
   has_many :patches, through: :patch_vegetables
   has_one_attached :photo
   validates :planting_season, inclusion: { in: SEASONS.map { |season| season[:name] }}
