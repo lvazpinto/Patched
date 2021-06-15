@@ -5,15 +5,15 @@
     </div>
     <ul class="nav nav-pills mb-3 list-inline tabs-underlined active" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active tab-underlined" id="pills-home-tab" href="#pills-home" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">You will need</button>
+        <button class="nav-link active tab-underlined" id="pills-need-tab" href="#pills-need" data-toggle="pill" role="tab" aria-controls="pills-need" aria-selected="true">You will need</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link tab-underlined" id="pills-assembly-tab" href="#pills-assembly" data-toggle="pill" role="tab" aria-controls="pills-assembly" aria-selected="false">Instructions</button>
+        <button class="nav-link tab-underlined" id="pills-instructions-tab" href="#pills-instructions" data-toggle="pill" role="tab" aria-controls="pills-instructions" aria-selected="false">Instructions</button>
       </li>
     </ul>
     </div>
   <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <div class="tab-pane fade show active" id="pills-need" role="tabpanel" aria-labelledby="pills-need-tab">
       <div class="cards-container">
         <div class="row">
           <div class="card-setup col-6">
@@ -65,7 +65,17 @@
         </div>
       </div>
     </div>
-    <div class="tab-pane fade" id="pills-assembly" role="tabpanel" aria-labelledby="pills-assembly-tab">
+    <div class="tab-pane fade" id="pills-instructions" role="tabpanel" aria-labelledby="pills-instructions-tab">
+      <div class="container-small-card">
+        <div class="small-card-extra">
+          <h6 class="header-small">Space needed</h6>
+          <p class="p-big"><%=@vegetable.vegetable_area%>cm</p>
+        </div>
+        <div class="small-card-extra">
+          <h6 class="header-small">Full growth duration</h6>
+          <p class="p-big"><%= pluralize(@vegetable.growing_length, 'day') %></p>
+        </div>
+      </div>
       <div class="card-text-step">
         <% if @instruction.planting_instructions_step_one.present? %>
         <ul>
@@ -110,3 +120,4 @@
   </div>
   <%= render 'shared/menu' %>
 </div>
+
