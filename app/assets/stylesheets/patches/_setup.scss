@@ -15,7 +15,7 @@
 
 .card-img-top {
   border-radius: 3%;
-  width: 164px;
+  width: 140px;
   height: 165px;
 }
 
@@ -38,13 +38,12 @@
 .assembly-pic {
   width: 262px;
   height: 262px;
-  margin: 10px 100px;
+  margin-left: 56px;
 }
 
 .card-text-step {
   text-align: justify;
-  margin: 20px 50px;
-  padding: 10px;
+  margin: 20px 20px;
 }
 
 .card-text-step h5 {
@@ -52,6 +51,7 @@
   font-weight: 700;
   font-size: 16px;
   font-family: DM Sans;
+  margin-top: -5px;
 }
 
 .card-text-step p {
@@ -65,18 +65,26 @@
   border-radius: 5%;
 }
 
-.list-bullets-1 {
-  list-style-image: url('elipse-dark.png');
-}
+ul.list-ellipse-class {
+  li {
+    list-style-type: none;
+    padding-left: 48px;
+    margin-left: -30px;
+  }
 
-.list-bullets-2 {
-  list-style-image: url('elipse-meddark.png');
-}
+  .list-bullets-1 {
+    background: asset-url('elipse-dark.png') no-repeat 0 0 transparent;
+  }
 
-.list-bullets-3 {
-  list-style-image: url('elipse-med.png');
-}
+  .list-bullets-2 {
+    background: asset-url('elipse-meddark.png') no-repeat 0 0 transparent;
+  }
 
-.list-bullets-4 {
-  list-style-image: url('elipse-light.png');
+  .list-bullets-3 {
+    background: asset-url('elipse-med.png') no-repeat 0 0 transparent;
+  }
+
+  .list-bullets-4 {
+    background: asset-url('elipse-light.png') no-repeat 0 0 transparent;
+  }
 }
