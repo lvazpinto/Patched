@@ -14,7 +14,7 @@
 
 <div class="background-light">
   <% @vegetables.each do |vegetable| %>
-    <%= link_to  patch_vegetable_path(@patch, vegetable) do %>
+    <%= link_to patch_vegetable_path(@patch, vegetable, instruction_type: 'planting') do %>
       <div class="vegetable-card-slider mb-3">
         <%= cl_image_tag(vegetable.photo.key, width: 80, height: 80, crop: :fill) %>
         <div class="vegetable-card-content">

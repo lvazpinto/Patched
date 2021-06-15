@@ -1,7 +1,7 @@
 <nav class="mobile-bottom-nav">
   <%= link_to patch_path(current_user.patches.last) do %>
   <div class="mobile-bottom-nav_item-content">
-    <div class="mobile-bottom-nav_item mobile-bottom-nav_item-active">
+    <div class="mobile-bottom-nav_item <%= current_page?(controller: 'patches', action: 'show') ? 'mobile-bottom-nav_item-active' : '' %>">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22H0V21.0303H22V22Z" fill="#C2C9D1"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22H0V21.0303H22V22Z" fill="black" fill-opacity="0.5"/>
@@ -22,7 +22,7 @@
   <% end %>
   <%= link_to setup_patch_path(@patch) do %>
    <div class="mobile-bottom-nav_item-content">
-    <div class="mobile-bottom-nav_item">
+    <div class="mobile-bottom-nav_item <%= current_page?(controller: 'patches', action: 'setup') ? 'mobile-bottom-nav_item-active' : '' %>">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M17 4.20446H5V3.22668H17V4.20446Z" fill="#C2C9D1"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M17 4.20446H5V3.22668H17V4.20446Z" fill="black" fill-opacity="0.5"/>
@@ -43,7 +43,7 @@
   <% end %>
   <%= link_to planting_patch_path(@patch) do %>
   <div class="mobile-bottom-nav_item-content">
-    <div class="mobile-bottom-nav_item">
+    <div class="mobile-bottom-nav_item <%= current_page?(controller: 'patches', action: 'planting') ? 'mobile-bottom-nav_item-active' : '' %>">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22H0V21H22V22Z" fill="#C2C9D1"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22H0V21H22V22Z" fill="black" fill-opacity="0.5"/>
@@ -60,7 +60,7 @@
   <% end %>
   <%= link_to care_patch_path(@patch) do %>
   <div class="mobile-bottom-nav_item-content">
-    <div class="mobile-bottom-nav_item">
+    <div class="mobile-bottom-nav_item <%= current_page?(controller: 'patches', action: 'care') ? 'mobile-bottom-nav_item-active' : '' %>">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M22 21.9999H0V20.9999H22V21.9999Z" fill="#C2C9D1"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M22 21.9999H0V20.9999H22V21.9999Z" fill="black" fill-opacity="0.5"/>
@@ -81,7 +81,7 @@
     <% end %>
     <%= link_to harvesting_patch_path(@patch) do %>
     <div class="mobile-bottom-nav_item-content">
-    <div class="mobile-bottom-nav_item">
+    <div class="mobile-bottom-nav_item <%= current_page?(controller: 'patches', action: 'harvesting') ? 'mobile-bottom-nav_item-active' : '' %>">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.38738 8.21682C6.67863 8.29882 6.9315 8.37001 7.12668 8.42113L6.87332 9.3885C6.64916 9.32979 6.37794 9.25337 6.07409 9.16776C5.42974 8.98621 4.63866 8.76331 3.83852 8.58031C3.25599 8.44708 2.69144 8.34083 2.20666 8.29251C1.94299 8.26623 1.72184 8.25931 1.54365 8.26825C1.57926 8.64365 1.61137 9.02568 1.64405 9.41456C1.70661 10.159 1.77128 10.9286 1.86676 11.7249C2.02934 13.0809 2.27012 14.3843 2.70116 15.4522C3.13145 16.5182 3.72833 17.2942 4.57139 17.6854C5.41331 18.076 6.60628 18.1318 8.33516 17.528L8.66484 18.4721C6.79372 19.1255 5.31169 19.1313 4.15048 18.5925C2.99042 18.0542 2.25605 17.0212 1.77384 15.8265C1.29238 14.6337 1.03941 13.2246 0.873868 11.8439C0.779111 11.0536 0.709122 10.2276 0.643479 9.45275C0.596831 8.90216 0.552378 8.37746 0.502789 7.90991L0.460988 7.51579L0.835159 7.38513C1.24469 7.24212 1.77974 7.245 2.30584 7.29744C2.85023 7.3517 3.46068 7.46808 4.06148 7.60548C4.88448 7.79371 5.73285 8.03255 6.38738 8.21682Z" fill="#C2C9D1"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.38738 8.21682C6.67863 8.29882 6.9315 8.37001 7.12668 8.42113L6.87332 9.3885C6.64916 9.32979 6.37794 9.25337 6.07409 9.16776C5.42974 8.98621 4.63866 8.76331 3.83852 8.58031C3.25599 8.44708 2.69144 8.34083 2.20666 8.29251C1.94299 8.26623 1.72184 8.25931 1.54365 8.26825C1.57926 8.64365 1.61137 9.02568 1.64405 9.41456C1.70661 10.159 1.77128 10.9286 1.86676 11.7249C2.02934 13.0809 2.27012 14.3843 2.70116 15.4522C3.13145 16.5182 3.72833 17.2942 4.57139 17.6854C5.41331 18.076 6.60628 18.1318 8.33516 17.528L8.66484 18.4721C6.79372 19.1255 5.31169 19.1313 4.15048 18.5925C2.99042 18.0542 2.25605 17.0212 1.77384 15.8265C1.29238 14.6337 1.03941 13.2246 0.873868 11.8439C0.779111 11.0536 0.709122 10.2276 0.643479 9.45275C0.596831 8.90216 0.552378 8.37746 0.502789 7.90991L0.460988 7.51579L0.835159 7.38513C1.24469 7.24212 1.77974 7.245 2.30584 7.29744C2.85023 7.3517 3.46068 7.46808 4.06148 7.60548C4.88448 7.79371 5.73285 8.03255 6.38738 8.21682Z" fill="black" fill-opacity="0.5"/>
