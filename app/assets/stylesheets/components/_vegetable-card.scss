@@ -1,24 +1,31 @@
 .vegetable-card {
+  display: flex;
   background: #FFFFFF;
   border: 1px solid #F4F1ED;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(245, 238, 238, 0.94);
   border-radius: 10px;
-  width: 311px;
-  height: 78px;
-  display: flex;
   align-items: center;
   margin: 0 auto;
   font-size: 16px;
   color: $dark-olive;
-  text-align: left;
+  text-decoration: none;
+  justify-content: space-between;
+  padding: 12px;
+  transition: transform .3s;
+
+  &:active {
+    transform: scale(1.1, 1.1);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
 
   &.checked {
     .check {
-      border-radius: 10px;
-      width: 30px;
-      height: 30px;
       background: $dark-olive;
+      text-decoration: none;
 
       .tick {
         display: block;
@@ -31,15 +38,23 @@
   }
 
   .check {
-    border-radius: 10px;
-    width: 30px;
-    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
     background: $olive-lightest;
+    text-decoration: none;
 
     .tick {
       display: none;
     }
   }
+}
+
+.nomes {
+  text-align: left;
 }
 
 .action {
@@ -64,9 +79,4 @@
 .vegetable-card h5 {
   font-weight: bold;
   font-family: DM Sans;
-}
-
-.main-v {
-  display: flex;
-  height: 78px;
 }
