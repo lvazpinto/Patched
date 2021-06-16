@@ -12,9 +12,9 @@ $font-size-base: 1rem;
 // Colors
 $body-color: $gray-dark;
 $primary:    $dark-olive;
-$success:    $green;
+$success:    $olive-med;
 $info:       $yellow;
-$danger:     $red;
+$danger:     $chilli-med;
 $warning:    $orange;
 
 // Buttons & inputs' radius
@@ -26,5 +26,5 @@ $border-radius-sm: 100px;
 $headings-line-height: 1.4;
 
 // Nav
-$navbar-dark-toggler-icon-bg:      url("patch.svg");
+$navbar-dark-toggler-icon-bg:      asset-url("patch.svg");
 $navbar-dark-toggler-border-color: none;
