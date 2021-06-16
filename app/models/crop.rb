@@ -3,9 +3,14 @@ class Crop < ApplicationRecord
   belongs_to :patch
 
   scope :planted, -> { where.not(planting_date: nil) }
+  scope :harvested, -> { where.not(harvesting_date: nil) }
 
   def planted?
     !planting_date.nil?
+  end
+
+  def harvested?
+    !harvesting_date.nil?
   end
 
   def days_until_harvest
