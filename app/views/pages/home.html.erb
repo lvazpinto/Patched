@@ -5,7 +5,9 @@
     <% if user_signed_in? %>
       <%= link_to 'Get Started', new_patch_path, class: "btn btn-primary w-100" %>
     <% else %>
-      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary w-100" %>
+      <div class="mx-5">
+      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-secondary w-100" %>
+      </div>
       <div class="link-center" id="button-landing">
         <%= link_to 'Log in', new_user_session_path, style: "color: white" %>
       </div>
