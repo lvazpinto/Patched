@@ -5,11 +5,11 @@
   <% end %>
       <h1>Planting</h1>
   </div>
-    <ul class="list-inline tabs-underlined">
-      <li>
-        <a href="#" class="tab-underlined active">Vegetables</a>
-      </li>
-    </ul>
+  <ul class="nav nav-pills mb-3 list-inline tabs-underlined active" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active tab-underlined" id="pills-home-tab" href="#pills-home" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">Vegetables</button>
+    </li>
+  </ul>
 </div>
 
 <div class="background-light">
@@ -20,8 +20,11 @@
 
         <div class="vegetable-card-content">
           <h5 class="font-size-h5"><%= vegetable.name %></h5>
-          <p><%= pluralize(vegetable.days_until_planting, 'day') %> to go until planting</p>
-
+          <% if vegetable.days_until_planting.zero? %>
+            <p>Ready to plant!</p>
+          <% else %>
+            <p><%= pluralize(vegetable.days_until_planting, 'day') %> to go until planting</p>
+          <% end %>
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: <%= 100 - (vegetable.days_until_planting * 100 / 365) %>%; background-color: #572271;" aria-valuenow="<%= vegetable.days_until_planting %>" aria-valuemin="0" aria-valuemax="365"></div>
           </div>
