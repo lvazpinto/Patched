@@ -1,0 +1,53 @@
+.br-theme-css-stars .br-widget {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.br-theme-css-stars .br-widget {
+  height: 28px;
+  white-space: nowrap;
+}
+.br-theme-css-stars .br-widget a {
+  text-decoration: none;
+  float: left;
+  font-size: 23px;
+  margin-right: 5px;
+}
+.br-theme-css-stars .br-widget a:after {
+  color: transparent;
+
+  background-image: asset-url('sun-gray.svg');
+  background-size: 23px 28px;
+}
+.br-theme-css-stars .br-widget a.br-active:after {
+  color: transparent;
+
+  background-image: asset-url('sun-aubergine.svg');
+  background-size: 23px 28px;
+}
+.br-theme-css-stars .br-widget a.br-selected:after {
+  color: transparent;
+
+  background-image: asset-url('sun-aubergine.svg');
+  background-size: 23px 28px;
+}
+.br-theme-css-stars .br-widget .br-current-rating {
+  display: none;
+}
+.br-theme-css-stars .br-readonly a {
+  cursor: default;
+}
+
+@media print {
+  .br-theme-css-stars .br-widget a:after {
+    content: "\2606";
+    color: black;
+  }
+  .br-theme-css-stars .br-widget a.br-active:after,
+  .br-theme-css-stars .br-widget a.br-selected:after {
+    content: "\2605";
+    color: black;
+  }
+}
