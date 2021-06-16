@@ -3,7 +3,10 @@ class CropsController < ApplicationController
     @crop = Crop.find(params[:id])
     @crop.update(crop_params)
 
-    redirect_to harvesting_patch_path(@crop.patch)
+    options = {}
+    options[:harvested] = @crop.id if @crop.harvesting_date_previously_changed?
+
+    redirect_to harvesting_patch_path(@crop.patch, options)
   end
 
   private

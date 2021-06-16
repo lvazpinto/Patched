@@ -27,12 +27,6 @@
     <% end %>
   <% end %>
 
-  <%# if @vegetable.days_until_harvest.zero? %>
-    <%# if params[:instruction_type] == 'harvesting' %>
-      <%#= render 'harvesting_check_box', crop: Crop.find_by(patch: @patch, vegetable: @vegetable) %>
-    <%# end %>
-  <%# end %>
-
   <div class="tab-content" id="pills-tabContent">
       <% if params[:instruction_type] == 'planting' %>
         <%= render 'instructions_planting' %>

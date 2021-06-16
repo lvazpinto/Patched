@@ -20,7 +20,9 @@
 
         <div class="vegetable-card-content">
           <h5 class="font-size-h5"><%= crop.vegetable.name %></h5>
-          <% if crop.days_until_harvest.zero? %>
+          <% if crop.harvested? %>
+            <p>Already harvested</p>
+          <% elsif crop.days_until_harvest.zero? %>
             <p>Ready to harvest!</p>
           <% else %>
             <p><%= pluralize(crop.days_until_harvest, 'day') %> until harvest</p>
@@ -34,6 +36,13 @@
     <% end %>
   </div>
 </div>
+
+<% if params[:harvested] %>
+  <% crop = Crop.find(params[:harvested]) %>
+  <div class="d-none js-harvest-popup">
+    Congratulations! You harvested <%= crop.vegetable.name %>!
+  </div>
+<% end %>
 
 <%= render 'shared/menu' %>
 

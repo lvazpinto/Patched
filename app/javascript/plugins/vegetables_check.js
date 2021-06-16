@@ -7,7 +7,7 @@ const updateCardClass = (checkbox, card) => {
 }
 
 const vegetablesCheck = () => {
-  const checks = document.querySelectorAll('.vegetable-card');
+  const checks = document.querySelectorAll('.js-vegetable-item');
 
   checks.forEach(card => {
     const targetID = card.dataset.target;

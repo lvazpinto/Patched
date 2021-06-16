@@ -2,12 +2,12 @@
   <%= f.input :planting_date, label: false, input_html: { class: 'd-none' } %>
   <%= check_box_tag :planted, 1, crop.planted?, class: 'd-none', id: 'planted_check' %>
 
-  <a href="#" class="vegetable-card mb-3 js-crop-check" data-submit="edit_crop_<%= crop.id %>">
+  <%= link_to harvesting_patch_path(@patch), class: 'vegetable-card mb-3 js-crop-check', data: { submit: "edit_crop_#{crop.id}" } do %>
     <span class="flex-grow-1 ml-3 font-size-h5"><%= crop.vegetable.name %> is planted?</span>
     <div class="check">
       <svg class="tick" width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.5 7.66667L6.5 13L16.5 1" stroke="white" stroke-width="2"/>
       </svg>
     </div>
-  </a>
+  <% end %>
 <% end %>
