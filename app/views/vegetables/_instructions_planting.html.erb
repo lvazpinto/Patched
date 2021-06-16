@@ -1,3 +1,56 @@
+    <div class="tab-pane fade show active" id="pills-need" role="tabpanel" aria-labelledby="pills-need-tab">
+      <div class="cards-container">
+        <div class="row">
+          <div class="card-setup col-6">
+
+              <div class="card-body">
+                 <%= image_tag "seedlings.jpg", class: "card-img-top" %>
+                <h5 class="card-text"><%= @vegetable.name %> seedlings</h5>
+                <p class="card-text">x5</p>
+                <p class="card-text">Organically grown</p>
+                <h6 class="card-text">Where to find</h6>
+              </div>
+          </div>
+          <div class="card-setup col-6">
+              <div class="card-body">
+                <%= image_tag "rake.jpg", class: "card-img-top" %>
+                <h5 class="card-text">Rake</h5>
+                <p class="card-text">80cm</p>
+                <p class="card-text">Recycled materials</p>
+                <h6 class="card-text">Where to find</h6>
+              </div>
+          </div>
+          <div class="card-setup col-6">
+              <div class="card-body">
+                <%= image_tag "digging-fork.jpg", class: "card-img-top" %>
+                <h5 class="card-text">Digging fork</h5>
+                <p class="card-text">30cm</p>
+                <p class="card-text">Recycled materials</p>
+                <h6 class="card-text">Expert advise</h6>
+              </div>
+          </div>
+          <div class="card-setup col-6">
+              <div class="card-body">
+                <%= image_tag "compost.jpg", class: "card-img-top" %>
+                <h5 class="card-text">Planting steaks</h5>
+                <p class="card-text">x5 12 x 14cm</p>
+                <p class="card-text">Add after 1 month</p>
+                <h6 class="card-text">Make your own</h6>
+              </div>
+          </div>
+          <div class="card-setup col-6">
+              <div class="card-body">
+                <%= image_tag "fleece.jpg", class: "card-img-top" %>
+                <h5 class="card-text">Fleece</h5>
+                <p class="card-text">1m x 1m</p>
+                <p class="card-text">Use in colder months</p>
+                <h6 class="card-text">Where to find</h6>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="tab-pane fade" id="pills-instructions" role="tabpanel" aria-labelledby="pills-instructions-tab">
 <div class="container-small-card">
   <div class="small-card-extra">
     <h6 class="header-small">Space needed</h6>
@@ -52,3 +105,5 @@
     </ul>
   </div>
 <% end %>
+</div>
+
