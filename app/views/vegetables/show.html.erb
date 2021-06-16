@@ -13,6 +13,14 @@
     </ul>
   </div>
 
+  <% if @vegetable.days_until_planting.zero? %>
+    <% if params[:instruction_type] == 'planting' %>
+      <%= render 'planting_check_box', crop: Crop.find_by(patch: @patch, vegetable: @vegetable) %>
+    <% else %>
+      <%= render 'harvesting_check_box' %>
+    <% end %>
+  <% end %>
+
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-need" role="tabpanel" aria-labelledby="pills-need-tab">
       <div class="cards-container">

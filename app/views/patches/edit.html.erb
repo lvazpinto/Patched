@@ -16,7 +16,7 @@
         item_wrapper_class: 'd-none' %>
 
       <% @vegetables.each do |vegetable| %>
-        <a href="#" class="vegetable-card mb-3" data-target="patch_vegetable_ids_<%= vegetable.id %>">
+        <a href="#" class="vegetable-card mb-3" data-target="crop_ids_<%= vegetable.id %>">
           <%= cl_image_tag vegetable.photo.key, width: 45, height: 45, crop: :fill, class: 'vegetable-photo' %>
           <span class="flex-grow-1 ml-3 font-size-h5"><%= vegetable.name %></span>
           <div class="check">

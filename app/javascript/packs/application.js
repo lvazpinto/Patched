@@ -29,6 +29,7 @@ import { initStarRating } from '../plugins/init_star_rating';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 // import { initSelect2 } from '../components/init_select2';
 import { vegetablesCheck } from '../plugins/vegetables_check';
+import { initCropCheck } from '../plugins/crop_check';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -36,4 +37,5 @@ document.addEventListener('turbolinks:load', () => {
   initAutocomplete();
   // initSelect2();
   vegetablesCheck();
+  initCropCheck();
 });
