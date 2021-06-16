@@ -1,7 +1,6 @@
 <%= simple_form_for crop do |f| %>
   <%= f.input :planting_date, label: false, input_html: { class: 'd-none' } %>
   <%= check_box_tag :planted, 1, crop.planted?, class: 'd-none', id: 'planted_check' %>
-
   <%= link_to harvesting_patch_path(@patch), class: 'vegetable-card-checkbox-planting mb-3 mx-3 js-crop-check', data: { submit: "edit_crop_#{crop.id}" } do %>
     <span class="flex-grow-1 ml-3 font-size-h5">
       <svg class="planting-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
