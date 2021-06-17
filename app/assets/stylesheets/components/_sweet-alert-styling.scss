@@ -3,7 +3,6 @@
   border-radius: 10px;
   background-color: $dark-olive;
   font-size: 12px;
-  border: 1px solid $dark-olive;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
   width: 100%;
 }
@@ -21,8 +20,9 @@
 
 .swal-title {
   margin: 0px;
-  font-size: 16px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+  font-size: 24px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   margin-bottom: 28px;
   font-family: Merriweather;
+  color: $dark-olive;
 }
