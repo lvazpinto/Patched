@@ -38,11 +38,13 @@
 .assembly-pic {
   width: 262px;
   height: 262px;
+  object-fit: cover;
   margin-left: 56px;
+  border-radius: 10px;
 }
 
 .card-text-step {
-  text-align: justify;
+  text-align: left;
   margin: 20px 20px;
 }
 
@@ -81,6 +83,7 @@
 
 ul.list-ellipse-class {
   li {
+    margin-top: 32px;
     list-style-type: none;
     padding-left: 48px;
     margin-left: -30px;

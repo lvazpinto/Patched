@@ -1,22 +1,13 @@
+<div class="body-wrapper">
 <div>
   <div class="background pt-3">
     <div class="pages-container">
-      <%# if params[:instruction_type] == 'planting' %>
-        <%#= link_to planting_patch_path(@crop.patch, options) do %>
-          <%#= image_tag "button/backarrow.png", class:"buttonarrow-left" %>
-        <%# end %>
-      <%# else %>
-        <%#= link_to harvesting_patch_path(@crop.patch, options) do %>
-          <%#= image_tag "button/backarrow.png", class:"buttonarrow-left" %>
-      <%# end %>
-     <%# end %>
-
      <h1><%= @vegetable.name %></h1>
     </div>
     <ul class="nav nav-pills mb-3 list-inline tabs-underlined active" id="pills-tab" role="tablist">
       <% if params[:instruction_type] == 'planting' %>
       <li class="nav-item" role="presentation">
-        <button class="nav-link active tab-underlined" id="pills-need-tab" href="#pills-need" data-toggle="pill" role="tab" aria-controls="pills-need" aria-selected="true">You will need</button>
+        <button class="nav-link active tab-underlined" id="pills-need-tab" href="#pills-need" data-toggle="pill" role="tab" aria-controls="pills-need" aria-selected="true">You need</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link tab-underlined" id="pills-instructions-tab" href="#pills-instructions" data-toggle="pill" role="tab" aria-controls="pills-instructions" aria-selected="false">Instructions</button>
@@ -45,4 +36,5 @@
   </div>
 
   <%= render 'shared/menu' %>
+</div>
 </div>
