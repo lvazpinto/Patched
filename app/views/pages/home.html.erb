@@ -2,19 +2,38 @@
   <div class="pages-container-taller-2">
     <h1> Welcome to Patched</h1>
     <h3>Create an eco-friendly <br> vegetable patch with our <br> simple step-by-step guide</h3>
+    <div class="mx-5">
     <% if user_signed_in? %>
-      <%= link_to 'Get Started', new_patch_path, class: "btn btn-primary w-100" %>
+      <%= link_to 'Get Started', new_patch_path, class: "btn btn-secondary w-100" %>
+    </div>
     <% else %>
-      <div class="mx-5">
       <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-secondary w-100" %>
-      </div>
       <div class="link-center" id="button-landing">
         <%= link_to 'Log in', new_user_session_path, style: "color: white" %>
       </div>
     <% end %>
+    </div>
   </div>
 </div>
-  <div class="container-landing">
+  <div class="container-landing d-flex flex-column align-items-center">
+    <div class="card-landing mt-5">
+    <svg width="80" height="80" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 4.20446H5V3.22668H17V4.20446Z" fill="#B0633B"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 4.20446H5V3.22668H17V4.20446Z" fill="#B0633B" fill-opacity="0.5"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 10.6578H5V9.68005H17V10.6578Z" fill="#B0633B"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 10.6578H5V9.68005H17V10.6578Z" fill="#B0633B" fill-opacity="0.5"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 17.1111H5V16.1333H17V17.1111Z" fill="#B0633B"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 17.1111H5V16.1333H17V17.1111Z" fill="#B0633B" fill-opacity="0.5"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22H0V21.0222H22V22Z" fill="#B0633B"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22H0V21.0222H22V22Z" fill="#B0633B" fill-opacity="0.5"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 0H5.5V21.0222H4.5V0.977778H3.5V21.0222H2.5V0Z" fill="#B0633B"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 0H5.5V21.0222H4.5V0.977778H3.5V21.0222H2.5V0Z" fill="#B0633B" fill-opacity="0.5"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0H19.5V21.0222H18.5V0.977778H17.5V21.0222H16.5V0Z" fill="#B0633B"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0H19.5V21.0222H18.5V0.977778H17.5V21.0222H16.5V0Z" fill="#B0633B" fill-opacity="0.5"/>
+      </svg>
+      <h5>Setup your kitchen garden</h5>
+      <p>Choose your favorite vegetables, tailored to your garden, and assemble your patch with our assistance</p>
+    </div>
     <div class="card-landing">
       <svg class= "icon-home-page" width="80" height="80" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22H0V21H22V22Z" fill="#B0633B"/>
@@ -27,7 +46,7 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.58961 9.73256H15.5V10.3032C15.5 12.801 15.5001 14.7735 14.9808 16.4395C14.4418 18.1688 13.3597 19.5339 11.3018 20.8832L10.9729 21.0989L10.6858 20.83C10.5584 20.7107 10.4144 20.5838 10.2585 20.4464C9.55653 19.8278 8.61382 18.997 7.86312 17.691C6.9346 16.0758 6.30273 13.7627 6.55654 10.1971L6.58961 9.73256ZM7.52576 10.7326C7.36795 13.8722 7.95808 15.8497 8.73008 17.1927C9.39066 18.3418 10.1872 19.0464 10.8842 19.6629C10.9483 19.7196 11.0115 19.7756 11.0737 19.831C12.7704 18.6537 13.5981 17.5149 14.0261 16.1419C14.4642 14.7364 14.4973 13.0554 14.4998 10.7326H7.52576Z" fill="#B0633B" fill-opacity="0.5"/>
       </svg>
       <h5>Plant your seedlings</h5>
-      <p>With our help you will be ready to start your patch with all instructions needed</p>
+      <p>Collect your vegetable seedlings and learn how and when to plant them</p>
     </div>
     <div class="card-landing">
       <svg width="80" height="80" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,10 +63,10 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.1 10.7999L4.1 6.79994L4.9 6.19994L7.9 10.1999L7.1 10.7999Z" fill="#B0633B"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.1 10.7999L4.1 6.79994L4.9 6.19994L7.9 10.1999L7.1 10.7999Z" fill="#B0633B" fill-opacity="0.5"/>
       </svg>
-      <h5>Care for your Patch</h5>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <h5>Care for your patch</h5>
+      <p>Nurture your garden by <br> following our advice, and watch <br> your vegetables flourish</p>
     </div>
-    <div class="card-landing">
+    <div class="card-landing mb-5">
       <svg width="80" height="80" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.38738 8.21682C6.67863 8.29882 6.9315 8.37001 7.12668 8.42113L6.87332 9.3885C6.64916 9.32979 6.37794 9.25337 6.07409 9.16776C5.42974 8.98621 4.63866 8.76331 3.83852 8.58031C3.25599 8.44708 2.69144 8.34083 2.20666 8.29251C1.94299 8.26623 1.72184 8.25931 1.54365 8.26825C1.57926 8.64365 1.61137 9.02568 1.64405 9.41456C1.70661 10.159 1.77128 10.9286 1.86676 11.7249C2.02934 13.0809 2.27012 14.3843 2.70116 15.4522C3.13145 16.5182 3.72833 17.2942 4.57139 17.6854C5.41331 18.076 6.60628 18.1318 8.33516 17.528L8.66484 18.4721C6.79372 19.1255 5.31169 19.1313 4.15048 18.5925C2.99042 18.0542 2.25605 17.0212 1.77384 15.8265C1.29238 14.6337 1.03941 13.2246 0.873868 11.8439C0.779111 11.0536 0.709122 10.2276 0.643479 9.45275C0.596831 8.90216 0.552378 8.37746 0.502789 7.90991L0.460988 7.51579L0.835159 7.38513C1.24469 7.24212 1.77974 7.245 2.30584 7.29744C2.85023 7.3517 3.46068 7.46808 4.06148 7.60548C4.88448 7.79371 5.73285 8.03255 6.38738 8.21682Z" fill="#B0633B"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.38738 8.21682C6.67863 8.29882 6.9315 8.37001 7.12668 8.42113L6.87332 9.3885C6.64916 9.32979 6.37794 9.25337 6.07409 9.16776C5.42974 8.98621 4.63866 8.76331 3.83852 8.58031C3.25599 8.44708 2.69144 8.34083 2.20666 8.29251C1.94299 8.26623 1.72184 8.25931 1.54365 8.26825C1.57926 8.64365 1.61137 9.02568 1.64405 9.41456C1.70661 10.159 1.77128 10.9286 1.86676 11.7249C2.02934 13.0809 2.27012 14.3843 2.70116 15.4522C3.13145 16.5182 3.72833 17.2942 4.57139 17.6854C5.41331 18.076 6.60628 18.1318 8.33516 17.528L8.66484 18.4721C6.79372 19.1255 5.31169 19.1313 4.15048 18.5925C2.99042 18.0542 2.25605 17.0212 1.77384 15.8265C1.29238 14.6337 1.03941 13.2246 0.873868 11.8439C0.779111 11.0536 0.709122 10.2276 0.643479 9.45275C0.596831 8.90216 0.552378 8.37746 0.502789 7.90991L0.460988 7.51579L0.835159 7.38513C1.24469 7.24212 1.77974 7.245 2.30584 7.29744C2.85023 7.3517 3.46068 7.46808 4.06148 7.60548C4.88448 7.79371 5.73285 8.03255 6.38738 8.21682Z" fill="#B0633B" fill-opacity="0.5"/>
@@ -61,9 +80,10 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22H0V21H22V22Z" fill="#B0633B" fill-opacity="0.5"/>
       </svg>
       <h5>Harvest your vegetables</h5>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Enjoy the fruits of your labour, <br> by harvesting them according to <br> their needs, at the right time</p>
     </div>
   </div>
+</div>
   <div class="footer">
     <div class="footer-links">
       <a href="#"><i class="fab fa-facebook"></i></a>

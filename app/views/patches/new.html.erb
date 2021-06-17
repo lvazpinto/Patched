@@ -8,7 +8,10 @@
         <h1>What is your location?</h1>
         <%= f.input :location, label: "Location", class:"form-control" %>
         <h1>How sunny is your garden?</h1>
-        <%= f.input :hours_of_sun, collection: (1..6).to_a, label: "1 (very shady) 6 (very sunny)" %>
+        <div class="d-flex justify-content-between">
+          <p class="hi">Very shady</p><p class="hi">Very sunny</p>
+        </div>
+        <%= f.input :hours_of_sun, collection: (1..6).to_a, label: false %>
         <%= f.button :submit, class:"btn btn-primary w-100 my-4 px-2" %>
       <% end %>
     </div>
