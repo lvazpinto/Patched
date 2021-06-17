@@ -4,21 +4,24 @@
   font-family: DM Sans;
   font-size: 18px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0px;
   padding: 18px;
   text-shadow: 1px 1px #0E0000;
+  margin-bottom: 16px;
 }
 
 .pages-container-taller-2 h1 {
   text-align: center;
   color: white;
   text-shadow: 1px 1px #0E0000;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .pages-container-taller-2 {
-  margin-top: -40px;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('man-in-garden.jpg');
-  background-size: 380px 425px;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('man-in-garden-2.jpg');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 438px;
   margin-top: 0px;
