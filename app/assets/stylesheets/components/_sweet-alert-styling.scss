@@ -1,0 +1,28 @@
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 10px;
+  background-color: $dark-olive;
+  font-size: 12px;
+  border: 1px solid $dark-olive;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.swal-text {
+  background-color: $oatmeal-light;
+  padding: 17px;
+  border: 1px solid $oatmeal-light;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: $gray-meddark;
+  font-family: DM Sans;
+}
+
+.swal-title {
+  margin: 0px;
+  font-size: 16px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+  margin-bottom: 28px;
+  font-family: Merriweather;
+}
